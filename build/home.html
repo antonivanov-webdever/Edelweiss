@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиничный комплекс Эдельвейс</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.min.css">
+  </head>
+  <body class="index">
+    <header class="header"> 
+      <div class="header-wrapper">
+        <div class="column header__column column--first"><a class="logo" href="/">
+            <svg>
+              <use xlink:href="images/sprite.svg#logo"></use>
+            </svg></a></div>
+        <div class="column header__column column--second">
+          <div class="menu-btn header__menu-btn">
+            <div class="menu-btn__burger"><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span></div><span class="menu-btn__text">меню</span>
+          </div>
+        </div>
+        <div class="column header__column column--third">
+          <div class="header-links"> <a class="header-links__item link--light" href="#">Дома</a>
+            <div class="header-links__line"></div><a class="header-links__item link--light" href="#">Номера</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="fullpage">
+      <div class="section">
+        <div class="slide first-screen" style="height:100vh;">
+          <div class="container">
+            <div class="column column--first"><img class="first-screen__bg" src="images/hero-bg.jpg" alt=""></div>
+            <div class="column column--second" style="background-color:#fff;">
+              <h1 class="title title--small">Гостиничный комплекс Эдельвейс</h1>
+              <p class="text first-screen__text">Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.</p><a class="link first-screen__link" href="#">Больше об Эдельвейсе</a>
+            </div>
+            <div class="column column--third">
+              <div class="first-screen__overflow-img"><img class="first-screen__bg" src="images/hero-bg-2.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide" style="background-color: green;height:100vh;"></div>
+        <div class="slide" style="background-color: yellow;height:100vh;"></div>
+      </div>
+    </div>
+    <script src="scripts/main.min.js"></script>
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="column column--first footer__column">
+          <div class="footer-page-counter">
+            <div class="footer-page-counter__inner"> <span class="footer-page-counter__current">1</span>
+              <div class="footer-page-counter__lines"> 
+                <div class="footer-page-counter__line footer-page-counter__line--current"></div>
+                <div class="footer-page-counter__line footer-page-counter__line--total"></div>
+              </div><span class="footer-page-counter__total">4</span>
+            </div>
+          </div>
+        </div>
+        <div class="column column--second footer__column">
+          <div class="booking show">
+            <button class="booking__open">
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-up--big"></use>
+              </svg>
+            </button>
+            <div class="booking__params params">
+              <div class="params-item">
+                <div class="params-item__title">въезд</div>
+                <div class="params-item__value">01.09.2020</div>
+              </div>
+              <div class="params-separator"></div>
+              <div class="params-item">
+                <div class="params-item__title">выезд</div>
+                <div class="params-item__value">02.09.2020</div>
+              </div>
+              <div class="params-separator"></div>
+              <div class="params-item">
+                <div class="params-item__title">количество <br> человек</div>
+                <div class="params-item__value">2</div>
+              </div>
+            </div>
+            <div class="calendar booking__calendar">
+              <div class="calendar__control">
+                <button class="calendar__button calendar__button-prev" data-calendar-button="btnPrev">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <div class="calendar__month" data-calendar-month="05-21">Май, 2021</div>
+                <button class="calendar__button calendar__button-next" data-calendar-button="btnNext">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="calendar__content"> 
+                <div class="calendar__header">
+                  <div class="calendar__day-name">пн</div>
+                  <div class="calendar__day-name">вт</div>
+                  <div class="calendar__day-name">ср</div>
+                  <div class="calendar__day-name">чт</div>
+                  <div class="calendar__day-name">пт</div>
+                  <div class="calendar__day-name">сб</div>
+                  <div class="calendar__day-name">вс</div>
+                </div>
+                <div class="calendar__days">
+                  <div class="calendar__day">1</div>
+                  <div class="calendar__day">2</div>
+                  <div class="calendar__day">3</div>
+                  <div class="calendar__day">4</div>
+                  <div class="calendar__day">5</div>
+                  <div class="calendar__day">6</div>
+                  <div class="calendar__day">7</div>
+                  <div class="calendar__day">8</div>
+                  <div class="calendar__day">9</div>
+                  <div class="calendar__day">10</div>
+                  <div class="calendar__day">11</div>
+                  <div class="calendar__day">12</div>
+                  <div class="calendar__day">13</div>
+                  <div class="calendar__day">14</div>
+                  <div class="calendar__day">15</div>
+                  <div class="calendar__day">16</div>
+                  <div class="calendar__day">17</div>
+                  <div class="calendar__day">18</div>
+                  <div class="calendar__day">19</div>
+                  <div class="calendar__day">20</div>
+                  <div class="calendar__day">21</div>
+                  <div class="calendar__day">22</div>
+                  <div class="calendar__day">23</div>
+                  <div class="calendar__day">24</div>
+                  <div class="calendar__day">25</div>
+                  <div class="calendar__day">26</div>
+                  <div class="calendar__day">27</div>
+                  <div class="calendar__day">28</div>
+                  <div class="calendar__day">29</div>
+                  <div class="calendar__day">30</div>
+                  <div class="calendar__day">31</div>
+                </div>
+              </div>
+            </div>
+            <div class="term booking__term"><span class="term__desc">Количество ночей: </span><span class="term__count">3 ночи</span></div>
+            <button class="booking__close">
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-down--big"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="column column--third footer__column">
+          <button class="footer__button">бронировать</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
