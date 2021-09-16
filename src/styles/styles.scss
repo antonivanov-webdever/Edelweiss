@@ -1,0 +1,24 @@
+// Resets
+@import "resets/normalize";
+@import "resets/settings";
+
+// Libraries
+@import "libraries/fullpage";
+
+// Assets
+@import "assets/variables";
+@import "assets/mixins";
+@import "assets/fonts";
+@import "assets/ui";
+@import "assets/global";
+
+// Components
+@import "components/header";
+@import "components/footer";
+
+// Styles
+
+// Pages
+@import "pages/home/first-screen";
+@import "pages/home/booking";
+@import "pages/home/calendar";

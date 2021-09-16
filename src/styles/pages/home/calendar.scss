@@ -1,0 +1,122 @@
+.calendar {
+  width: 400px;
+
+  &__control {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    color: $black;
+    font-family: "Gilroy";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: (22 / 16);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 40px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    svg {
+      fill: transparent;
+      width: 8px;
+      height: 12px;
+      transition: transform 0.4s ease;
+      margin-bottom: 4px;
+    }
+      
+    &-next {
+      margin-left: 10px;
+
+      @include hover {
+        &:hover {
+          svg {
+            transform: translateX(3px);
+          }
+        }
+      }
+      
+    }
+
+    &-prev {
+      margin-right: 10px;
+      @include hover {
+        &:hover {
+          svg {
+            transform: translateX(-3px);
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    margin-top: 20px;
+  }
+   
+  &__day-name {
+    width: 42px;
+    height: 42px;
+    margin: 0 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $beige;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: (19 / 16);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__days {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &__day {
+    width: 42px;
+    height: 42px;
+    padding: 3px 6px;
+    background-color: $white;
+    font-family: 'Gilroy', sans-serif;
+    color: #c4c4c4;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: (19 / 16);
+    letter-spacing: 0.02em;
+    margin: 9px;
+
+    &:hover:not(.calendar__day--empty) {
+      background-color: $brown;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+      
+    &-today {
+      background-color: $beige;
+      color: #fff;
+    }
+  }
+}

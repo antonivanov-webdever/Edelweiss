@@ -1,0 +1,65 @@
+// Имя отеля на разных страницах
+.name {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $black;
+
+  @include media("xl", false) {
+    font-size: vw(30);
+  }
+}
+
+// Основной класс для большинства заголовков
+.title {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $black;
+
+  &--big {
+    font-size: 48px;
+    line-height: 130%;
+
+    @include media("xl", false) {
+      font-size: vw(48);
+    }
+  }
+
+  &--small {
+    font-size: 30px;
+    line-height: 120%;
+  }
+}
+
+// Большой фоновый текст
+.backdrop {
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 218px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @include media("xl", false) {
+    font-size: vw(180);
+    line-height: vw(218);
+  }
+}
+
+.link {
+  font-family: 'Roboto', sans-serif;
+  color: $text-primary;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &--light {
+    font-weight: 300;
+  }
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}

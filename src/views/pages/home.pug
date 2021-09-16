@@ -1,0 +1,26 @@
+extends ../layout/default
+
+block variables
+  - var pageLang = ''
+  - var pageTitle = 'Гостиничный комплекс Эдельвейс'
+  - var bodyClass = 'index'
+
+block header 
+  include ../modules/_header
+
+block content
+  #fullpage
+    .section(style="")
+      .slide.first-screen(style="height:100vh;")
+        .container
+          .column.column--first
+            img.first-screen__bg(src="images/hero-bg.jpg", alt="")
+          .column.column--second(style="background-color:#fff;")
+            h1.title.title--small Гостиничный комплекс Эдельвейс
+            p.text.first-screen__text Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.
+            a.link.first-screen__link(href="#") Больше об Эдельвейсе
+          .column.column--third
+            .first-screen__overflow-img
+              img.first-screen__bg(src="images/hero-bg-2.jpg", alt="")
+      .slide(style="background-color: green;height:100vh;")
+      .slide(style="background-color: yellow;height:100vh;")

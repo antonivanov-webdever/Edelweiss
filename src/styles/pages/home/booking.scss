@@ -1,0 +1,121 @@
+.booking {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 150px);
+  max-height: 150px;
+  background-color: $beige;
+  transition: max-height 0.5s ease;
+
+
+  .booking__open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .calendar,
+  .term,
+  .booking__close {
+    opacity: 0;
+  }
+
+  &.show {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 53px;
+    max-height: 800px;
+
+    .booking__open {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .booking__close,
+    .calendar,
+    .term {
+      opacity: 1;
+    }
+  }
+
+  &__open,
+  &__close {
+    display: block;
+    margin: 0 auto 0 227px;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+
+    svg {
+      fill: transparent;
+      width: 52px;
+      height: 26px;
+    }
+  }
+
+  &__open {
+    position: absolute;
+    top: -71px;
+    z-index: 100;
+
+    @include hover {
+      &:hover {
+        transform: translateY(-7px); 
+      }
+    }
+  }
+
+  &__close {
+    @include hover {
+      &:hover {
+        transform: translateY(7px); 
+      }
+    }
+  }
+
+  &__calendar {
+    margin: 0 auto;
+  }
+
+  &__term {
+    padding: 0 33px;
+    font-size: 16px;
+    line-height: (19 / 16);
+  }
+}
+
+.params {
+  display: flex;
+  justify-content: space-between;
+  padding: 53px 33px 0;
+
+  &-item {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+    width: calc(33.33% - 50px);
+
+    &__title {
+      font-size: 14px;
+      line-height: (16 / 14);
+    }
+
+    &__value {
+      font-family: 'Gilroy', sans-serif;
+      font-weight: 300;
+      color: $black;
+    }
+  }
+
+  &-separator {
+    min-height: 100%;
+    width: 1px;
+    background-color: $text-primary;
+  }
+
+
+}

@@ -1,0 +1,44 @@
+.first-screen {
+  .column--second {
+    justify-content: center;
+    min-height: 100%;
+    padding-top: 150px;
+    padding-bottom: 300px;
+  }
+
+  .column--third {
+    justify-content: center;
+    min-height: 100%;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    background-color: $beige;
+  }
+
+  &__overflow-img {
+    height: 100%;
+    position: relative;
+    height: calc(100vh - 300px);
+    width: 552px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    margin-top: 50px;
+  }
+
+  &__link {
+    margin-top: 25px;
+  }
+
+  &__text {
+    max-width: 374px;
+  }
+}

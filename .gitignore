@@ -1,0 +1,12 @@
+# Global
+node_modules
+build
+
+# Local
+.prettierignore
+.eslintrc
+
+DS_Store
+.DS_Store
+
+package-lock.json
