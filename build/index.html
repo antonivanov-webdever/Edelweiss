@@ -10,55 +10,68 @@
   <body class="index">
     <header class="header"> 
       <div class="header-wrapper">
-        <div class="column header__column column--first"><a class="logo" href="/">
-            <svg>
-              <use xlink:href="images/sprite.svg#logo"></use>
-            </svg></a></div>
-        <div class="column header__column column--second">
-          <div class="menu-btn header__menu-btn">
-            <div class="menu-btn__burger"><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span></div><span class="menu-btn__text">меню</span>
+        <div class="column column--left">
+          <div class="logo header__logo"><a class="logo__link" href="/">
+              <svg>
+                <use xlink:href="images/sprite.svg#logo"></use>
+              </svg></a></div>
+        </div>
+        <div class="column column--center">
+          <div class="header__menu">
+            <div class="menu-btn header__menu-btn">
+              <div class="menu-btn__burger"><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span></div><span class="menu-btn__text">меню</span>
+            </div>
           </div>
         </div>
-        <div class="column header__column column--third">
-          <div class="header-links"> <a class="header-links__item link--light" href="#">Дома</a>
-            <div class="header-links__line"></div><a class="header-links__item link--light" href="#">Номера</a>
+        <div class="column column--right header__column--right">
+          <div class="header-links"><a class="link header-links__item link--light" href="#">Дома</a>
+            <div class="header-links__line"></div><a class="link header-links__item link--light" href="#">Номера</a>
           </div>
+        </div>
+      </div>
+      <div class="menu">
+        <h3 class="title title--bigest menu__title">Эдельвейс</h3>
+        <div class="menu__container">
+          <nav class="nav menu__nav">
+            <ul class="nav-menu">
+              <li class="nav-menu__item"><a class="nav-menu__link" href="">Бронирование</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="">Номера</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="">Дома</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="">Акции</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="">Услуги</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu__images">
+          <div class="menu__image"><img src="./images/menu-bg.jpg" alt=""></div>
         </div>
       </div>
     </header>
-    <div id="fullpage">
-      <div class="section">
-        <div class="slide first-screen" style="height:100vh;">
-          <div class="container">
-            <div class="column column--first"><img class="first-screen__bg" src="images/hero-bg.jpg" alt=""></div>
-            <div class="column column--second" style="background-color:#fff;">
-              <h1 class="title title--small">Гостиничный комплекс Эдельвейс</h1>
-              <p class="text first-screen__text">Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.</p><a class="link first-screen__link" href="#">Больше об Эдельвейсе</a>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="column column--left">
+          <div class="hero__left">
+            <div class="hero__left-bg"><img src="images/hero-bg.jpg" alt=""></div>
+            <div class="hero__wrapper">
+              <h1 class="title title--bigest hero__title">Эдельвейс</h1>
             </div>
-            <div class="column column--third">
-              <div class="first-screen__overflow-img"><img class="first-screen__bg" src="images/hero-bg-2.jpg" alt=""></div>
-            </div>
-          </div>
-        </div>
-        <div class="slide" style="background-color: green;height:100vh;"></div>
-        <div class="slide" style="background-color: yellow;height:100vh;"></div>
-      </div>
-    </div>
-    <script src="scripts/main.min.js"></script>
-    <footer class="footer">
-      <div class="footer-wrapper">
-        <div class="column column--first footer__column">
-          <div class="footer-page-counter">
-            <div class="footer-page-counter__inner"> <span class="footer-page-counter__current">1</span>
-              <div class="footer-page-counter__lines"> 
-                <div class="footer-page-counter__line footer-page-counter__line--current"></div>
-                <div class="footer-page-counter__line footer-page-counter__line--total"></div>
-              </div><span class="footer-page-counter__total">4</span>
+            <div class="social">
+              <div class="social__inner"><span class="social__current">1</span>
+                <div class="social__lines">
+                  <div class="social__line social__line--current"></div>
+                  <div class="social__line social__line--total"></div>
+                </div><span class="social__total">4</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="column column--second footer__column">
-          <div class="booking show">
+        <div class="column column--center hero__column" style="background-color:#fff;">
+          <div class="hero__center">
+            <h1 class="title title--small">Гостиничный комплекс <br> в абзаково</h1>
+            <p class="text hero__text">Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.</p><a class="link hero__link" href="#">Больше об Эдельвейсе</a>
+          </div>
+          <div class="booking hero__booking">
             <button class="booking__open">
               <svg>
                 <use xlink:href="images/sprite.svg#arrow-up--big"></use>
@@ -94,7 +107,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="calendar__content"> 
+              <div class="calendar__content">
                 <div class="calendar__header">
                   <div class="calendar__day-name">пн</div>
                   <div class="calendar__day-name">вт</div>
@@ -139,7 +152,7 @@
                 </div>
               </div>
             </div>
-            <div class="term booking__term"><span class="term__desc">Количество ночей: </span><span class="term__count">3 ночи</span></div>
+            <div class="term booking__term"><span class="term__desc">Количество ночей:</span><span class="term__count">3 ночи</span></div>
             <button class="booking__close">
               <svg>
                 <use xlink:href="images/sprite.svg#arrow-down--big"></use>
@@ -147,10 +160,17 @@
             </button>
           </div>
         </div>
-        <div class="column column--third footer__column">
-          <button class="footer__button">бронировать</button>
+        <div class="column column--right">
+          <div class="hero__right">
+            <div class="call-btn"><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span><span> </span><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span>
+              <div class="call-btn__round"></div>
+            </div>
+            <div class="hero__right-bg"><img src="./images/hero-bg-2.jpg" alt=""></div>
+            <button class="hero__button"><span>бронировать</span></button>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

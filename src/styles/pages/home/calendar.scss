@@ -1,5 +1,5 @@
 .calendar {
-  width: 400px;
+  width: vw(400);
 
   &__control {
     width: 100%;
@@ -11,7 +11,7 @@
     color: $black;
     font-family: "Gilroy";
     font-weight: bold;
-    font-size: 16px;
+    font-size: vw(16);
     line-height: (22 / 16);
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -30,14 +30,18 @@
 
     svg {
       fill: transparent;
-      width: 8px;
-      height: 12px;
+      width: vw(8);
+      height: vw(12);
       transition: transform 0.4s ease;
       margin-bottom: 4px;
     }
-      
+
     &-next {
       margin-left: 10px;
+
+      @include min(1440) {
+        margin-left: vw(10);
+      }
 
       @include hover {
         &:hover {
@@ -46,11 +50,15 @@
           }
         }
       }
-      
     }
 
     &-prev {
       margin-right: 10px;
+
+      @include min(1440) {
+        margin-right: vw(10);
+      }
+
       @include hover {
         &:hover {
           svg {
@@ -66,23 +74,30 @@
     height: 42px;
     display: flex;
     align-items: center;
+    margin: 0 vw(-10);
+  }
+
+  &__month {
+    font-size: vw(16);
   }
 
   &__content {
-    margin-top: 20px;
+    margin-top: vw(20);
   }
-   
+
   &__day-name {
-    width: 42px;
-    height: 42px;
-    margin: 0 9px;
+    width: vw(42);
+    height: vw(42);
+    margin: 0 vw(9);
+    padding: vw(3) vw(6);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     background-color: $beige;
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: vw(16);
     line-height: (19 / 16);
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -91,21 +106,22 @@
   &__days {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin: vw(10) vw(-10) 0;
   }
 
   &__day {
-    width: 42px;
-    height: 42px;
-    padding: 3px 6px;
-    background-color: $white;
-    font-family: 'Gilroy', sans-serif;
+    width: vw(42);
+    height: vw(42);
+    padding: vw(3) vw(6);
+    background-color: #ffffff;
+    font-family: "Gilroy", sans-serif;
     color: #c4c4c4;
-    font-size: 16px;
+    font-size: vw(16);
     font-weight: 400;
-    line-height: (19 / 16);
+    line-height: 1.1875;
     letter-spacing: 0.02em;
-    margin: 9px;
+    margin: vw(9);
+    flex-shrink: 0;
 
     &:hover:not(.calendar__day--empty) {
       background-color: $brown;
@@ -113,7 +129,7 @@
       cursor: pointer;
       transition: all 0.3s;
     }
-      
+
     &-today {
       background-color: $beige;
       color: #fff;

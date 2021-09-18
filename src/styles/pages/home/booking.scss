@@ -4,11 +4,10 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 100vh;
   max-height: 150px;
   background-color: $beige;
   transition: max-height 0.5s ease;
-
 
   .booking__open {
     opacity: 1;
@@ -26,7 +25,7 @@
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 53px;
-    max-height: 800px;
+    max-height: calc(100vh - 150px);
 
     .booking__open {
       opacity: 0;
@@ -43,25 +42,27 @@
   &__open,
   &__close {
     display: block;
-    margin: 0 auto 0 227px;
+    margin: 0 auto 0 auto;
     transform: translateY(0);
     transition: transform 0.4s ease;
 
     svg {
       fill: transparent;
-      width: 52px;
-      height: 26px;
+      width: vw(52);
+      height: vw(26);
     }
   }
 
   &__open {
     position: absolute;
-    top: -71px;
+    top: vw(-60);
+    left: 50%;
+    transform: translate(-50%);
     z-index: 100;
 
     @include hover {
       &:hover {
-        transform: translateY(-7px); 
+        transform: translate(-50%, -7px);
       }
     }
   }
@@ -69,18 +70,19 @@
   &__close {
     @include hover {
       &:hover {
-        transform: translateY(7px); 
+        transform: translateY(7px);
       }
     }
   }
 
   &__calendar {
     margin: 0 auto;
+    padding-bottom: 42.5px;
   }
 
   &__term {
     padding: 0 33px;
-    font-size: 16px;
+    font-size: vw(16);
     line-height: (19 / 16);
   }
 }
@@ -88,10 +90,15 @@
 .params {
   display: flex;
   justify-content: space-between;
-  padding: 53px 33px 0;
+  padding: 42.5px 66px;
+
+  @include min(1920) {
+    padding: vw(47) vw(66);
+  }
+
 
   &-item {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     display: flex;
     flex-direction: column;
@@ -100,12 +107,12 @@
     width: calc(33.33% - 50px);
 
     &__title {
-      font-size: 14px;
+      font-size: vw(14);
       line-height: (16 / 14);
     }
 
     &__value {
-      font-family: 'Gilroy', sans-serif;
+      font-family: "Gilroy", sans-serif;
       font-weight: 300;
       color: $black;
     }
@@ -116,6 +123,4 @@
     width: 1px;
     background-color: $text-primary;
   }
-
-
 }

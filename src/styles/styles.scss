@@ -3,7 +3,6 @@
 @import "resets/settings";
 
 // Libraries
-@import "libraries/fullpage";
 
 // Assets
 @import "assets/variables";
@@ -15,10 +14,11 @@
 // Components
 @import "components/header";
 @import "components/footer";
+@import "components/menu";
 
 // Styles
 
 // Pages
-@import "pages/home/first-screen";
+@import "pages/home/hero";
 @import "pages/home/booking";
 @import "pages/home/calendar";

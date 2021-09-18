@@ -6,17 +6,19 @@ window.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    const bookingOpenBtn = booking.querySelector('button.booking__open');
-    const bookingCloseBtn = booking.querySelector('button.booking__close');
-
     booking.addEventListener('click', e => {
       const target = e.target;
 
-      if (target.closest('.booking__open') && !booking.classList.contains('show')) {
+      const bookingOpenBtn =  target.closest('.booking__open');
+
+      if (bookingOpenBtn && !booking.classList.contains('show')) {
         booking.classList.add('show');
       }
 
-      if (target.closest('.booking__close') && booking.classList.contains('show')) {
+      const bookingCloseBtn =  target.closest('.booking__close');
+      console.log(booking);
+      console.log(booking.classList);
+      if (bookingCloseBtn && booking.classList.contains('show')) {
         booking.classList.remove('show');
       }
     })

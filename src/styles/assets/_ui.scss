@@ -7,7 +7,7 @@
   text-transform: uppercase;
   color: $black;
 
-  @include media("xl", false) {
+  @include min("xl") {
     font-size: vw(30);
   }
 }
@@ -23,14 +23,23 @@
     font-size: 48px;
     line-height: 130%;
 
-    @include media("xl", false) {
+    @include min("xl") {
       font-size: vw(48);
     }
+  }
+
+  &--bigest {
+    font-size: 143px;
+    line-height: 173px;
   }
 
   &--small {
     font-size: 30px;
     line-height: 120%;
+
+    @include min("xl") {
+      font-size: vw(30);
+    }
   }
 }
 
@@ -42,24 +51,70 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
 
-  @include media("xl", false) {
+  @include min("xl") {
     font-size: vw(180);
     line-height: vw(218);
   }
 }
 
 .link {
-  font-family: 'Roboto', sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
   color: $text-primary;
   text-transform: uppercase;
   font-weight: 400;
+  transition: color 0.3s ease;
+  //
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  bottom: 0;
+  //  left: 0;
+  //  right: 0;
+  //  width: 0;
+  //  height: 1px;
+  //  background-color: $text-primary;
+  //  transition: width 0.3s ease;
+  //}
 
   &--light {
     font-weight: 300;
   }
+
+  @include hover {
+    color: $brown;
+    //&::after {
+    //  width: 100%;
+    //}
+  }
 }
 
 .text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+
+.logo {
+  &__link {
+    display: block;
+    width: 77px;
+    height: 31px;
+    text-decoration: none;
+
+    @include min("xl") {
+      width: vw(77);
+      height: vw(29);
+    }
+
+    svg {
+      width: 77px;
+      height: 31px;
+
+      @include min("xl") {
+        width: vw(77);
+        height: vw(29);
+      }
+    }
+  }
 }

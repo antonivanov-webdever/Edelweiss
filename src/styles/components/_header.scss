@@ -1,41 +1,47 @@
 .header {
   background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 98;
+  width: 100%;
+  overflow: hidden;
 
-  .column--first {
-    padding-left: 54px;
-  }
-
-  .column--third {
-    align-items: center;
-  }
-
-  &-wrapper {
-    height: 150px;
-    padding: 59px 0;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-  }
-
-  .logo {
-    width: 77px;
-    height: 31px;
-    text-decoration: none;
-
-    svg {
-      width: 77px;
-      height: 31px;
+  &.menu-active {
+    .logo__link svg {
+      fill: $white;
+    }
+    .header__column--right {
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
     }
   }
 
-  &-links {
+  &__column--right {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__logo {
+    height: 100%;
     display: flex;
     align-items: center;
+    padding-left: 50px;
+  }
+
+  &-wrapper {
+    position: relative;
+    z-index: 11;
+    height: 150px;
+    background-color: transparent;
+    display: flex;
+  }
+
+  &-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background-color: $beige;
 
     &__line {
       height: 14px;
@@ -48,6 +54,13 @@
       text-transform: uppercase;
     }
   }
+
+  &__menu {
+    height: 100%;
+    padding-left: 80px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu {
@@ -56,6 +69,46 @@
     align-items: center;
     color: $text-primary;
     cursor: pointer;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: $brown;
+
+      .menu-btn__line {
+        background-color: $brown;
+      }
+    }
+
+    &.active {
+      color: $white;
+
+      @include hover {
+        color: $brown;
+
+        .menu-btn__line {
+          background-color: $brown;
+        }
+      }
+
+      .menu-btn__line {
+        background-color: $white;
+
+        &:first-child {
+          transform: rotate(21.2deg);
+          transform-origin: left top;
+        }
+
+        &:nth-child(2) {
+          width: 0;
+        }
+
+        &:last-child {
+          width: 100%;
+          transform: rotate(-21.2deg);
+          transform-origin: left bottom;
+        }
+      }
+    }
 
     &__burger {
       width: 33px;
@@ -63,12 +116,18 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @include min("xl") {
+        width: vw(33);
+        height: vw(13);
+      }
     }
 
     &__line {
       width: 100%;
       height: 1px;
       background-color: $text-primary;
+      transition: all 0.4s ease;
 
       &:last-child {
         width: 51.5%;
@@ -80,6 +139,11 @@
       text-transform: uppercase;
       font-size: 16px;
       margin-left: 8px;
+
+      @include min("xl") {
+        font-size: vw(16);
+        margin-left: vw(8);
+      }
     }
   }
 }
