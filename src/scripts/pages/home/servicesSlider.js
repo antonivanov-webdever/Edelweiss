@@ -1,73 +1,3 @@
-// Libraries
-
-// Components
-
-// Pages
-
-window.addEventListener('DOMContentLoaded', function() {
-    function applyHeaderLogic() {
-        const header = document.querySelector('header');
-        const menuBtn = document.querySelector('.menu-btn');
-        const menu = document.querySelector('.menu');
-
-        function toggleMenu() {
-            header.classList.toggle('menu-active');
-            menuBtn.classList.toggle('active');
-            menu.classList.toggle('active');
-        }
-
-        header.addEventListener('click', function(e) {
-            const target = e.target;
-            const menuBtn = target.closest('.menu-btn');
-            const mobileMenu = target.matches('.menu');
-
-            if (menuBtn || mobileMenu) {
-                toggleMenu();
-            }
-        })
-
-        window.addEventListener('keydown', function(e) {
-            const key = e.key;
-
-            if (key === 'Escape' && menu.classList.contains('active')) {
-                toggleMenu();
-            }
-        })
-    }
-
-    applyHeaderLogic();
-
-})
-window.addEventListener('DOMContentLoaded', function() {
-  const toggleBookingBlock = () => {
-    const booking = document.querySelector('.booking');
-
-    if (!booking) {
-      return;
-    }
-
-    booking.addEventListener('click', e => {
-      const target = e.target;
-
-      const bookingOpenBtn =  target.closest('.booking__open');
-
-      if (bookingOpenBtn && !booking.classList.contains('show')) {
-        booking.classList.add('show');
-      }
-
-      const bookingCloseBtn =  target.closest('.booking__close');
-      console.log(booking);
-      console.log(booking.classList);
-      if (bookingCloseBtn && booking.classList.contains('show')) {
-        booking.classList.remove('show');
-      }
-    })
-
-  }
-
-  toggleBookingBlock();
-
-})
 window.addEventListener('DOMContentLoaded', function() {
     const servicesSlider = () => {
         const sliderContainer = document.getElementById("servicesSlider");
@@ -164,4 +94,3 @@ window.addEventListener('DOMContentLoaded', function() {
     servicesSlider();
 
 })
-//# sourceMappingURL=main.min.js.map

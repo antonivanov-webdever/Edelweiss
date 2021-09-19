@@ -1,0 +1,60 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+
+  &-item {
+    background-color: $white;
+    width: 100%;
+    max-width: 440px;
+
+    &__inner {
+      padding: 90px 70px;
+      display: flex;
+      flex-direction: column;
+
+      @include max(s) {
+        padding: 40px 30px;
+      }
+    }
+
+    &__title {
+      font-weight: normal;
+      font-size: 18px;
+      color: $black;
+    }
+
+    &__benefit {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      color: $black;
+    }
+
+    &__list {
+      margin-top: 20px;
+      font-weight: 300;
+
+      &-item {
+        margin-top: 16px;
+        display: flex;
+      }
+    }
+
+    &__icon {
+      margin-right: 5px;
+    }
+
+    &__footer {
+      margin-top: 25px;
+    }
+
+    &__link {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0.05rem;
+      color: #000000;
+      text-transform: uppercase;
+    }
+  }
+}

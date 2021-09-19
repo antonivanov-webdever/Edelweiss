@@ -38,5 +38,26 @@ body {
 }
 
 .container {
-  display: flex;
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  position: relative;
+  padding: 80px 0 120px;
+
+  @include max(m) {
+    padding: 60px 0 70px;
+  }
+}
+
+.slider {
+  position: relative;
+
+  &-wrapper {
+    position: absolute;
+    display: flex;
+  }
 }

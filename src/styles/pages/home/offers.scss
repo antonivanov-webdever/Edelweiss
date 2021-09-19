@@ -1,0 +1,47 @@
+.offers {
+  background-color: $beige;
+  background-image: url("../images/offers-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 96%;
+  background-position-y: bottom;
+  background-position-x: center;
+
+  &__title {
+    margin-bottom: 70px;
+
+    @include max(m) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__cards {
+    @include max(600) {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 40px;
+    letter-spacing: 0.03rem;
+  }
+
+  &__cards-item {
+    opacity: 0.9;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include max(600) {
+        margin-right: 0;
+      }
+    }
+
+    &:not(:first-child) {
+      @include max(600) {
+        display: none;
+      }
+    }
+  }
+
+}

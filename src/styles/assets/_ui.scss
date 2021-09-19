@@ -101,18 +101,6 @@
   @include max(s) {
     font-size: 14px;
   }
-  //
-  //&::after {
-  //  content: '';
-  //  position: absolute;
-  //  bottom: 0;
-  //  left: 0;
-  //  right: 0;
-  //  width: 0;
-  //  height: 1px;
-  //  background-color: $text-primary;
-  //  transition: width 0.3s ease;
-  //}
 
   &--light {
     font-weight: 300;
@@ -120,9 +108,25 @@
 
   @include hover {
     color: $brown;
-    //&::after {
-    //  width: 100%;
-    //}
+  }
+
+  &--arrow {
+    @include hover {
+      &::after {
+        transform: translateX(6px);
+      }
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 13px;
+      background: transparent url('../images/icons/link-arrow.svg') no-repeat center;
+      background-size: 120%;
+      margin-left: 15px;
+      transition: transform 0.3s ease;
+    }
   }
 }
 

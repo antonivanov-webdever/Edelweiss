@@ -1,5 +1,8 @@
 .hero {
+  position: relative;
   margin-top: -150px;
+  z-index: 1;
+  box-shadow: 0 7px 13px -5px #dac8b7;
 
   @include max(s) {
     margin-top: -80px;
@@ -46,6 +49,7 @@
     z-index: 1;
 
     &--left {
+      z-index: 2;
       @include max(m) {
         display: none;
       }
