@@ -10,13 +10,13 @@
   <body class="index">
     <header class="header"> 
       <div class="header-wrapper">
-        <div class="column column--left">
+        <div class="column column--left header__column--left">
           <div class="logo header__logo"><a class="logo__link" href="/">
               <svg>
                 <use xlink:href="images/sprite.svg#logo"></use>
               </svg></a></div>
         </div>
-        <div class="column column--center">
+        <div class="column column--center header__column--center">
           <div class="header__menu">
             <div class="menu-btn header__menu-btn">
               <div class="menu-btn__burger"><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span></div><span class="menu-btn__text">меню</span>
@@ -50,7 +50,7 @@
     </header>
     <section class="hero">
       <div class="hero__container">
-        <div class="column column--left">
+        <div class="column column--left hero__column--left">
           <div class="hero__left">
             <div class="hero__left-bg"><img src="images/hero-bg.jpg" alt=""></div>
             <div class="hero__wrapper">
@@ -66,10 +66,14 @@
             </div>
           </div>
         </div>
-        <div class="column column--center hero__column" style="background-color:#fff;">
+        <div class="column column--center hero__column hero__column--center">
           <div class="hero__center">
-            <h1 class="title title--small">Гостиничный комплекс <br> в абзаково</h1>
+            <h2 class="title title--big title--mobile">Эдельвейс</h2>
+            <h2 class="title title--small hero__main-title">Гостиничный комплекс <br> в абзаково</h2>
             <p class="text hero__text">Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.</p><a class="link hero__link" href="#">Больше об Эдельвейсе</a>
+            <div class="call-btn"><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span><span> </span><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span>
+              <div class="call-btn__round"></div>
+            </div>
           </div>
           <div class="booking hero__booking">
             <button class="booking__open">
@@ -77,94 +81,107 @@
                 <use xlink:href="images/sprite.svg#arrow-up--big"></use>
               </svg>
             </button>
-            <div class="booking__params params">
-              <div class="params-item">
-                <div class="params-item__title">въезд</div>
-                <div class="params-item__value">01.09.2020</div>
-              </div>
-              <div class="params-separator"></div>
-              <div class="params-item">
-                <div class="params-item__title">выезд</div>
-                <div class="params-item__value">02.09.2020</div>
-              </div>
-              <div class="params-separator"></div>
-              <div class="params-item">
-                <div class="params-item__title">количество <br> человек</div>
-                <div class="params-item__value">2</div>
-              </div>
-            </div>
-            <div class="calendar booking__calendar">
-              <div class="calendar__control">
-                <button class="calendar__button calendar__button-prev" data-calendar-button="btnPrev">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-left"></use>
-                  </svg>
-                </button>
-                <div class="calendar__month" data-calendar-month="05-21">Май, 2021</div>
-                <button class="calendar__button calendar__button-next" data-calendar-button="btnNext">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="calendar__content">
-                <div class="calendar__header">
-                  <div class="calendar__day-name">пн</div>
-                  <div class="calendar__day-name">вт</div>
-                  <div class="calendar__day-name">ср</div>
-                  <div class="calendar__day-name">чт</div>
-                  <div class="calendar__day-name">пт</div>
-                  <div class="calendar__day-name">сб</div>
-                  <div class="calendar__day-name">вс</div>
-                </div>
-                <div class="calendar__days">
-                  <div class="calendar__day">1</div>
-                  <div class="calendar__day">2</div>
-                  <div class="calendar__day">3</div>
-                  <div class="calendar__day">4</div>
-                  <div class="calendar__day">5</div>
-                  <div class="calendar__day">6</div>
-                  <div class="calendar__day">7</div>
-                  <div class="calendar__day">8</div>
-                  <div class="calendar__day">9</div>
-                  <div class="calendar__day">10</div>
-                  <div class="calendar__day">11</div>
-                  <div class="calendar__day">12</div>
-                  <div class="calendar__day">13</div>
-                  <div class="calendar__day">14</div>
-                  <div class="calendar__day">15</div>
-                  <div class="calendar__day">16</div>
-                  <div class="calendar__day">17</div>
-                  <div class="calendar__day">18</div>
-                  <div class="calendar__day">19</div>
-                  <div class="calendar__day">20</div>
-                  <div class="calendar__day">21</div>
-                  <div class="calendar__day">22</div>
-                  <div class="calendar__day">23</div>
-                  <div class="calendar__day">24</div>
-                  <div class="calendar__day">25</div>
-                  <div class="calendar__day">26</div>
-                  <div class="calendar__day">27</div>
-                  <div class="calendar__day">28</div>
-                  <div class="calendar__day">29</div>
-                  <div class="calendar__day">30</div>
-                  <div class="calendar__day">31</div>
+            <div class="booking__wrapper">
+              <div class="booking__header">
+                <div class="booking__params params">
+                  <div class="params-item">
+                    <div class="params-item__title">въезд</div>
+                    <div class="params-item__value">01.09.2020
+                      <svg>
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="params-separator"></div>
+                  <div class="params-item">
+                    <div class="params-item__title">выезд</div>
+                    <div class="params-item__value">02.09.2020
+                      <svg>
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="params-separator"></div>
+                  <div class="params-item">
+                    <div class="params-item__title">количество <br> человек</div>
+                    <div class="params-item__value">2
+                      <svg>
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="calendar booking__calendar">
+                <div class="calendar__control">
+                  <button class="calendar__button calendar__button-prev" data-calendar-button="btnPrev">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </button>
+                  <div class="calendar__month" data-calendar-month="05-21">Май, 2021</div>
+                  <button class="calendar__button calendar__button-next" data-calendar-button="btnNext">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="calendar__content">
+                  <div class="calendar__header">
+                    <div class="calendar__day-name">пн</div>
+                    <div class="calendar__day-name">вт</div>
+                    <div class="calendar__day-name">ср</div>
+                    <div class="calendar__day-name">чт</div>
+                    <div class="calendar__day-name">пт</div>
+                    <div class="calendar__day-name">сб</div>
+                    <div class="calendar__day-name">вс</div>
+                  </div>
+                  <div class="calendar__days">
+                    <div class="calendar__day">1</div>
+                    <div class="calendar__day">2</div>
+                    <div class="calendar__day">3</div>
+                    <div class="calendar__day">4</div>
+                    <div class="calendar__day">5</div>
+                    <div class="calendar__day">6</div>
+                    <div class="calendar__day">7</div>
+                    <div class="calendar__day">8</div>
+                    <div class="calendar__day">9</div>
+                    <div class="calendar__day">10</div>
+                    <div class="calendar__day">11</div>
+                    <div class="calendar__day">12</div>
+                    <div class="calendar__day">13</div>
+                    <div class="calendar__day">14</div>
+                    <div class="calendar__day">15</div>
+                    <div class="calendar__day">16</div>
+                    <div class="calendar__day">17</div>
+                    <div class="calendar__day">18</div>
+                    <div class="calendar__day">19</div>
+                    <div class="calendar__day">20</div>
+                    <div class="calendar__day">21</div>
+                    <div class="calendar__day">22</div>
+                    <div class="calendar__day">23</div>
+                    <div class="calendar__day">24</div>
+                    <div class="calendar__day">25</div>
+                    <div class="calendar__day">26</div>
+                    <div class="calendar__day">27</div>
+                    <div class="calendar__day">28</div>
+                    <div class="calendar__day">29</div>
+                    <div class="calendar__day">30</div>
+                    <div class="calendar__day">31</div>
+                  </div>
+                </div>
+              </div>
+              <div class="term booking__term"><span class="term__desc">Количество ночей:</span><span class="term__count">3 ночи</span></div>
+              <button class="booking__close">
+                <svg>
+                  <use xlink:href="images/sprite.svg#arrow-down--big"></use>
+                </svg>
+              </button>
             </div>
-            <div class="term booking__term"><span class="term__desc">Количество ночей:</span><span class="term__count">3 ночи</span></div>
-            <button class="booking__close">
-              <svg>
-                <use xlink:href="images/sprite.svg#arrow-down--big"></use>
-              </svg>
-            </button>
           </div>
         </div>
-        <div class="column column--right">
+        <div class="column column--right hero__column--right">
           <div class="hero__right">
-            <div class="call-btn"><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span><span> </span><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span>
-              <div class="call-btn__round"></div>
-            </div>
             <div class="hero__right-bg"><img src="./images/hero-bg-2.jpg" alt=""></div>
             <button class="hero__button"><span>бронировать</span></button>
           </div>

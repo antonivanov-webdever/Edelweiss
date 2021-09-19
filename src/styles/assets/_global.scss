@@ -7,7 +7,15 @@ body {
   line-height: 130%;
 
   @include min("xl") {
-    font-size: vw(18);
+    font-size: vw(16);
+  }
+
+  @include max(1200) {
+    font-size: 16px;
+  }
+
+  @include max(s) {
+    font-size: 14px;
   }
 }
 

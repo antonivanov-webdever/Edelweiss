@@ -2,72 +2,77 @@
 -let text = ['П', 'о', 'з', 'в', 'о', 'н', 'и', 'т', 'ь', ' ',  'а', 'д', 'м', 'и', 'н', 'и', 'с', 'т', 'р', 'а', 'т', 'о', 'р', 'у', ' ', 'П', 'о', 'з', 'в', 'о', 'н', 'и', 'т', 'ь', ' ',  'а', 'д', 'м', 'и', 'н', 'и', 'с', 'т', 'р', 'а', 'т', 'о', 'р', 'у'];
 section.hero
     .hero__container
-        .column.column--left
+        .column.column--left.hero__column--left
             .hero__left
                 .hero__left-bg
                     img(src="images/hero-bg.jpg", alt="")
                 .hero__wrapper
                     h1.title.title--bigest.hero__title Эдельвейс
                 .social
-                     .social__inner
-                         span.social__current 1
-                         .social__lines
-                             .social__line.social__line--current
-                             .social__line.social__line--total
-                         span.social__total 4
-        .column.column--center.hero__column(style="background-color:#fff;")
+                    .social__inner
+                        span.social__current 1
+                        .social__lines
+                            .social__line.social__line--current
+                            .social__line.social__line--total
+                        span.social__total 4
+        .column.column--center.hero__column.hero__column--center
             .hero__center
-                h1.title.title--small Гостиничный комплекс <br> в абзаково
+                h2.title.title--big.title--mobile Эдельвейс
+                h2.title.title--small.hero__main-title Гостиничный комплекс <br> в абзаково
                 p.text.hero__text Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.
                 a.link.hero__link(href="#") Больше об Эдельвейсе
-
-            .booking.hero__booking
-                 button.booking__open
-                     +icon('arrow-up--big')
-                 .booking__params.params
-                     .params-item
-                         .params-item__title въезд
-                         .params-item__value 01.09.2020
-                     .params-separator
-                     .params-item
-                         .params-item__title выезд
-                         .params-item__value 02.09.2020
-                     .params-separator
-                     .params-item
-                         .params-item__title количество <br> человек
-                         .params-item__value 2
-                 .calendar.booking__calendar
-                     .calendar__control
-                         button.calendar__button.calendar__button-prev(data-calendar-button="btnPrev")
-                             +icon('arrow-left')
-                         .calendar__month(data-calendar-month="05-21")
-                             | Май, 2021
-                         button.calendar__button.calendar__button-next(data-calendar-button="btnNext")
-                             +icon('arrow-right')
-                     .calendar__content
-                         .calendar__header
-                             .calendar__day-name пн
-                             .calendar__day-name вт
-                             .calendar__day-name ср
-                             .calendar__day-name чт
-                             .calendar__day-name пт
-                             .calendar__day-name сб
-                             .calendar__day-name вс
-                         .calendar__days
-                             each item in days
-                                 .calendar__day= item
-                 .term.booking__term
-                     span.term__desc Количество ночей:
-                     span.term__count 3 ночи
-                 button.booking__close
-                     +icon('arrow-down--big')
-        .column.column--right
-            .hero__right
                 .call-btn
                     each letter in text
                         span= letter
                     .call-btn__round
 
+            .booking.hero__booking
+                button.booking__open
+                    +icon('arrow-up--big')
+                .booking__wrapper
+                    .booking__header
+                        .booking__params.params
+                            .params-item
+                                .params-item__title въезд
+                                .params-item__value 01.09.2020
+                                    +icon('arrow-right')
+                            .params-separator
+                            .params-item
+                                .params-item__title выезд
+                                .params-item__value 02.09.2020
+                                    +icon('arrow-right')
+                            .params-separator
+                            .params-item
+                                .params-item__title количество <br> человек
+                                .params-item__value 2
+                                    +icon('arrow-right')
+                    .calendar.booking__calendar
+                        .calendar__control
+                            button.calendar__button.calendar__button-prev(data-calendar-button="btnPrev")
+                                +icon('arrow-left')
+                            .calendar__month(data-calendar-month="05-21")
+                                | Май, 2021
+                            button.calendar__button.calendar__button-next(data-calendar-button="btnNext")
+                                +icon('arrow-right')
+                        .calendar__content
+                            .calendar__header
+                                .calendar__day-name пн
+                                .calendar__day-name вт
+                                .calendar__day-name ср
+                                .calendar__day-name чт
+                                .calendar__day-name пт
+                                .calendar__day-name сб
+                                .calendar__day-name вс
+                            .calendar__days
+                                each item in days
+                                    .calendar__day= item
+                    .term.booking__term
+                        span.term__desc Количество ночей:
+                        span.term__count 3 ночи
+                    button.booking__close
+                        +icon('arrow-down--big')
+        .column.column--right.hero__column--right
+            .hero__right
                 .hero__right-bg
                     img(src="./images/hero-bg-2.jpg" alt="")
                 button.hero__button

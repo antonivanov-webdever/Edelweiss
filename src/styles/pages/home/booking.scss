@@ -9,9 +9,46 @@
   background-color: $beige;
   transition: max-height 0.5s ease;
 
+  @include max(s) {
+    max-height: 100px;
+  }
+
+  &__wrapper {
+    height: 100%;
+    padding-bottom: 53px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include max(m) {
+      padding-bottom: 30px;
+    }
+
+    @media (max-height: 767px) {
+      padding-bottom: 20px;
+    }
+  }
+
   .booking__open {
     opacity: 1;
     visibility: visible;
+  }
+
+  &__header {
+    height: 150px;
+    padding: 42.5px;
+    display: flex;
+    justify-content: stretch;
+
+    @media (max-height: 767px) {
+      padding: 42.5px 42.5px 20px;
+    }
+
+    @include max(s) {
+      height: 100px;
+      padding: 20px;
+    }
   }
 
   .calendar,
@@ -21,11 +58,11 @@
   }
 
   &.show {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-bottom: 53px;
     max-height: calc(100vh - 150px);
+
+    @include max(s) {
+      max-height: calc(100vh - 80px);
+    }
 
     .booking__open {
       opacity: 0;
@@ -50,6 +87,16 @@
       fill: transparent;
       width: vw(52);
       height: vw(26);
+
+      @include max(s) {
+        width: 52px;
+        height: 26px;
+      }
+
+      @include max(475) {
+        width: 40px;
+        height: 20px;
+      }
     }
   }
 
@@ -59,6 +106,14 @@
     left: 50%;
     transform: translate(-50%);
     z-index: 100;
+
+    @include max(s) {
+      top: -60px;
+    }
+
+    @include max(475) {
+      top: -40px;
+    }
 
     @include hover {
       &:hover {
@@ -78,24 +133,39 @@
   &__calendar {
     margin: 0 auto;
     padding-bottom: 42.5px;
+
+    @include max(m) {
+      padding-bottom: 20px;
+    }
+
+    @media (max-height: 767px) {
+      padding-bottom: 20px;
+    }
   }
 
   &__term {
     padding: 0 33px;
-    font-size: vw(16);
+    font-size: 16px;
     line-height: (19 / 16);
+
+    @include min('xl') {
+      font-size: vw(16);
+    }
+
+    @include max(m) {
+      padding: 0 33px 20px;
+    }
+
+    @media (max-height: 767px) {
+      padding: 0 33px 20px;
+    }
   }
 }
 
 .params {
   display: flex;
   justify-content: space-between;
-  padding: 42.5px 66px;
-
-  @include min(1920) {
-    padding: vw(47) vw(66);
-  }
-
+  width: 100%;
 
   &-item {
     font-family: "Roboto", sans-serif;
@@ -106,15 +176,38 @@
     padding: 5px 0;
     width: calc(33.33% - 50px);
 
+    @include max(1200) {
+      width: calc(33.3% - 20px);
+    }
+
     &__title {
       font-size: vw(14);
       line-height: (16 / 14);
+
+      @include max(m) {
+        font-size: 14px;
+      }
     }
 
     &__value {
       font-family: "Gilroy", sans-serif;
       font-weight: 300;
       color: $black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include max('md') {
+        margin-top: 5px;
+      }
+
+      svg {
+        width: 8px;
+        height: 12px;
+        margin: -2px 0 0 6px;
+        fill: transparent;
+        flex-shrink: 0;
+      }
     }
   }
 
@@ -122,5 +215,11 @@
     min-height: 100%;
     width: 1px;
     background-color: $text-primary;
+  }
+}
+
+.term {
+  &__count {
+    margin-left: 6px;
   }
 }
