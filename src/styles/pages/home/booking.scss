@@ -222,4 +222,11 @@
   &__count {
     margin-left: 6px;
   }
+
+  &__desc,
+  &__count {
+    @include max(350) {
+      display: none;
+    }
+  }
 }

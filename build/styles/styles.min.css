@@ -840,6 +840,22 @@ body {
     @media only screen and (max-width: 992px) {
       .hero__button {
         font-size: 16px; } }
+  .hero__mobile-button {
+    width: 200px;
+    padding: 20px;
+    display: none;
+    text-transform: uppercase;
+    background-color: #896441;
+    color: #ffffff;
+    margin: 20px auto 0; }
+    @media only screen and (max-width: 768px) {
+      .hero__mobile-button {
+        display: block; } }
+    @media only screen and (max-width: 350px) {
+      .hero__mobile-button {
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 14px; } }
 
 .social {
   position: relative;
@@ -1232,6 +1248,10 @@ body {
 
 .term__count {
   margin-left: 6px; }
+
+@media only screen and (max-width: 350px) {
+  .term__desc, .term__count {
+    display: none; } }
 
 .calendar {
   width: 27.77778vw; }
