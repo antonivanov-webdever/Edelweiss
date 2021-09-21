@@ -24,6 +24,15 @@
     display: inline-block;
     margin-top: 40px;
     letter-spacing: 0.03rem;
+    padding: 20px 50px;
+    background-color: #fff;
+    opacity: 0.9;
+    transition: all 0.3s;
+
+    @include hover {
+      background-color: $brown;
+      color: $white;
+    }
   }
 
   &__cards-item {

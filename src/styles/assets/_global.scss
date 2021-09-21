@@ -46,18 +46,13 @@ body {
 
 .section {
   position: relative;
-  padding: 80px 0 120px;
+  padding: 75px 0 75px;
 
   @include max(m) {
-    padding: 60px 0 70px;
+    padding: 50px 0 50px;
   }
-}
 
-.slider {
-  position: relative;
-
-  &-wrapper {
-    position: absolute;
-    display: flex;
+  @include max(s) {
+    padding: 30px 0 30px;
   }
 }

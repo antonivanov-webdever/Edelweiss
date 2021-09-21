@@ -3,6 +3,7 @@
 @import "resets/settings";
 
 // Libraries
+@import "libs/swiper.min";
 
 // Assets
 @import "assets/variables";
@@ -16,6 +17,7 @@
 @import "components/footer";
 @import "components/menu";
 @import "components/cards";
+@import "components/sliders";
 
 // Styles
 
@@ -25,3 +27,4 @@
 @import "pages/home/calendar";
 @import "pages/home/offers";
 @import "pages/home/services";
+@import "pages/home/activities";

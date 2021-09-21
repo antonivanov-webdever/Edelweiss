@@ -8,6 +8,8 @@ window.addEventListener('DOMContentLoaded', function() {
             header.classList.toggle('menu-active');
             menuBtn.classList.toggle('active');
             menu.classList.toggle('active');
+
+            document.body.style.overflow = header.classList.contains('menu-active') ? 'hidden' : 'visible';
         }
 
         header.addEventListener('click', function(e) {

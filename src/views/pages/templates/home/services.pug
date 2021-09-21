@@ -1,23 +1,23 @@
-section.services.main__services
-    .container
-        h2.title.title--big.services__title УСЛУГИ гостиничного <br> комплекса
-
-    .container-slider
-        .slider.services-slider#servicesSlider
-            .services-slider__image.services-slider__background
-            .slider-wrapper.slider_animate#servicesSliderWrapper
-                .slider-slide.services-slider__item
-                    img(src="images/services-slider/slide3.jpg" alt="Баня").services-slider__image
-                    h3.services-slider__title Банный комплекс
-                    p.services-slider__text Баня или сауна после активного отдыха – это не только естественный отдых, но и возможность расслабиться, снять боль в забитых мышцах. На территории гостинечного комплекса работает русская баня на дровах.
-                .slider-slide.services-slider__item
-                    img(src="images/services-slider/slide1.jpg" alt="Девушка с ребенком на велосипеде").services-slider__image
-                    h3.services-slider__title Прокат велосипедов
-                    p.services-slider__text Возьмите велосипед на прокат и наслаждайтесь великолепными видами Абзаково всей семьей.
-                .slider-slide.services-slider__item
-                    img(src="images/services-slider/slide2.jpg" alt="Сувенирная лавка").services-slider__image
-                    h3.services-slider__title Сувенирная лавка
-                    p.services-slider__text В сувенирной лавке вы сможете приобрести сувениры, которые будут напоминать Вам об отдыхе в Абзаково, а также натуральный Башкирский мёд.
-
-            button.services-slider__button.services-slider__button_prev
-            button.services-slider__button.services-slider__button_next
+section.services.section
+    .container.services__container
+        h2.title.title--big.services__title Услуги гостиничного комплекса
+        .slider-v1.swiper-container.services__slider-v1
+            .slider-v1-navigation
+                button.slider-v1-navigation-prev
+                button.slider-v1-navigation-next
+            .swiper-wrapper
+                .slider-v1-slide.swiper-slide
+                    .slider-v1-slide__wrapper
+                        .slider-v1-slide__image
+                            img(src="images/services-slider/slide1.jpg" alt="Девушка с ребенком на велосипеде")
+                        p.slider-v1-slide__text Возьмите велосипед на прокат и наслаждайтесь великолепными видами Абзаково всей семьей
+                .slider-v1-slide.swiper-slide
+                    .slider-v1-slide__wrapper
+                        .slider-v1-slide__image
+                            img(src="images/services-slider/slide2.jpg" alt="Сувенирная лавка")
+                        p.slider-v1-slide__text В сувенирной лавке вы сможете приобрести сувениры, которые будут напоминать Вам об отдыхе в Абзаково, а также натуральный Башкирский мёд.
+                .slider-v1-slide.swiper-slide
+                    .slider-v1-slide__wrapper
+                        .slider-v1-slide__image
+                            img(src="images/services-slider/slide3.jpg" alt="Баня")
+                        p.slider-v1-slide__text Баня или сауна после активного отдыха – это не только естественный отдых, но и возможность расслабиться, снять боль в забитых мышцах. На территории гостинечного комплекса работает русская баня на дровах.

@@ -25,6 +25,14 @@
   &__container {
     width: auto;
     margin: 230px auto 0;
+
+    @include max(s) {
+      margin: 130px auto 0;
+    }
+
+    @include max(xs) {
+      margin: 100px auto 0;
+    }
   }
 
   &__title {
@@ -42,6 +50,10 @@
     position: absolute;
     right: 80px;
     height: 100%;
+
+    @include max(m) {
+      display: none;
+    }
   }
 
   &__image {
@@ -52,7 +64,7 @@
     transition: inset 0.5s ease;
 
     img {
-      opacity: 0;
+      //opacity: 0;
     }
   }
 }
@@ -72,12 +84,20 @@
 
       &:not(:first-child) {
         margin-top: 40px;
+
+        @include max(xs) {
+          margin-top: 25px;
+        }
       }
     }
 
     &__link {
       color: $white;
       transition: color 0.4s ease;
+
+      @include max(xs) {
+        font-size: 30px;
+      }
 
       @include hover {
         color: $brown;

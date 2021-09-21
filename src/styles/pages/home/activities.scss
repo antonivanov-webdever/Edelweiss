@@ -1,9 +1,16 @@
-.services {
-  overflow-x: hidden;
-  overflow-y: visible;
+.activities {
   background-color: $beige;
+  max-height: 832px;
 
-  &__slider-v1 {
+  @include max(s) {
+    max-height: none;
+    padding-bottom: 60px;
+  }
+  @include max(xs) {
+
+  }
+
+  &__slider-v2 {
     margin-top: 80px;
 
     @include max(m) {

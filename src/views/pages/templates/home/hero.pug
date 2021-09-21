@@ -1,5 +1,4 @@
 -let days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
--let text = ['П', 'о', 'з', 'в', 'о', 'н', 'и', 'т', 'ь', ' ',  'а', 'д', 'м', 'и', 'н', 'и', 'с', 'т', 'р', 'а', 'т', 'о', 'р', 'у', ' ', 'П', 'о', 'з', 'в', 'о', 'н', 'и', 'т', 'ь', ' ',  'а', 'д', 'м', 'и', 'н', 'и', 'с', 'т', 'р', 'а', 'т', 'о', 'р', 'у'];
 section.hero
     .hero__container
         .column.column--left.hero__column--left
@@ -10,21 +9,22 @@ section.hero
                     h1.title.title--bigest.hero__title Эдельвейс
                 .social
                     .social__inner
-                        span.social__current 1
-                        .social__lines
-                            .social__line.social__line--current
-                            .social__line.social__line--total
-                        span.social__total 4
+                        a(href="").social__link.social__link--dark Instagram
+                        span.social__separator |
+                        a(href="").social__link.social__link--dark ВКонтакте
         .column.column--center.hero__column.hero__column--center
             .hero__center
                 h2.title.title--big.title--mobile Эдельвейс
                 h2.title.title--small.hero__main-title Гостиничный комплекс <br> в абзаково
                 p.text.hero__text Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.
                 a.link.hero__link(href="#") Больше об Эдельвейсе
-                .call-btn
-                    each letter in text
-                        span= letter
+                a.hero__mobile-link.hero__mobile-link--instagram(href="#")
+                    +icon('instagram')
+                a.hero__mobile-link.hero__mobile-link--vk(href="#")
+                    +icon('vk')
+                a(href="tel:+79028900438").call-btn
                     .call-btn__round
+                    +icon('call-text')
 
             .booking.hero__booking
                 button.booking__open

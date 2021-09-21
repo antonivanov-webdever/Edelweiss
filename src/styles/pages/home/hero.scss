@@ -49,7 +49,7 @@
     z-index: 1;
 
     &--left {
-      z-index: 2;
+
       @include max(m) {
         display: none;
       }
@@ -98,6 +98,35 @@
       margin-top: 10px;
       font-size: 18px;
       color: #363636;
+    }
+  }
+
+  &__mobile-link {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 200px;
+    left: 50px;
+
+    @include max(s) {
+      bottom: 130px;
+    }
+
+    @include max(xs) {
+      left: 30px;
+    }
+
+    &--vk {
+      left: 100px;
+
+      @include max(xs) {
+        left: 80px;
+      }
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -240,26 +269,38 @@
 .call-btn {
   position: absolute;
   top: 25%;
-  right: -100px;
-  width: 180px;
-  height: 180px;
+  right: -120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   cursor: pointer;
 
-  @include hover {
-    animation-play-state: paused;
-    .call-btn__round {
-      width: 86px;
-      height: 86px;
+  svg {
+    width: 100%;
+    height: 100%;
+
+    @include min(m) {
+      animation-name: rotation;
+      animation-duration: 16s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @include max(m) {
+      display: none;
     }
   }
 
-  @include min(m) {
-    animation-name: rotation;
-    animation-duration: 16s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  @include hover {
+    svg {
+      animation-play-state: paused;
+    }
+    .call-btn__round {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
   }
+
+
 
   @include max(m) {
     width: 40px;
@@ -281,9 +322,13 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background-color: $text-primary;
-    width: 76px;
-    height: 76px;
+    width: 65px;
+    height: 65px;
     transition: 0.4s ease;
+    background-image: url("../images/icons/call.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center center;
 
     @include max(1200) {
       width: 60px;
@@ -299,174 +344,6 @@
       left: 0;
     }
 
-  }
-
-  span {
-    height: 180px;
-    position: absolute;
-    width: 10px;
-    left: 85px;
-    top: 0;
-    transform-origin: center center;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 600;
-
-    @include max(1200) {
-      height: 180px;
-    }
-
-    @include max(m) {
-      display: none;
-    }
-
-    &:nth-child(1) {
-      transform: rotate(7deg);
-    }
-    &:nth-child(2) {
-      transform: rotate(14deg);
-    }
-    &:nth-child(3) {
-      transform: rotate(21deg);
-    }
-    &:nth-child(4) {
-      transform: rotate(28deg);
-    }
-    &:nth-child(5) {
-      transform: rotate(35deg);
-    }
-    &:nth-child(6) {
-      transform: rotate(42deg);
-    }
-    &:nth-child(7) {
-      transform: rotate(49deg);
-    }
-    &:nth-child(8) {
-      transform: rotate(56deg);
-    }
-    &:nth-child(9) {
-      transform: rotate(63deg);
-    }
-    &:nth-child(10) {
-      transform: rotate(70deg);
-    }
-    &:nth-child(11) {
-      transform: rotate(77deg);
-    }
-    &:nth-child(12) {
-      transform: rotate(84deg);
-    }
-    &:nth-child(13) {
-      transform: rotate(91deg);
-    }
-    &:nth-child(14) {
-      transform: rotate(98deg);
-    }
-    &:nth-child(15) {
-      transform: rotate(105deg);
-    }
-    &:nth-child(16) {
-      transform: rotate(112deg);
-    }
-    &:nth-child(17) {
-      transform: rotate(119deg);
-    }
-    &:nth-child(18) {
-      transform: rotate(126deg);
-    }
-    &:nth-child(19) {
-      transform: rotate(133deg);
-    }
-    &:nth-child(20) {
-      transform: rotate(140deg);
-    }
-    &:nth-child(21) {
-      transform: rotate(147deg);
-    }
-    &:nth-child(22) {
-      transform: rotate(154deg);
-    }
-    &:nth-child(23) {
-      transform: rotate(161deg);
-    }
-    &:nth-child(24) {
-      transform: rotate(168deg);
-    }
-    &:nth-child(25) {
-      transform: rotate(175deg);
-    }
-    &:nth-child(26) {
-      transform: rotate(182deg);
-    }
-    &:nth-child(27) {
-      transform: rotate(189deg);
-    }
-    &:nth-child(28) {
-      transform: rotate(196deg);
-    }
-    &:nth-child(29) {
-      transform: rotate(203deg);
-    }
-    &:nth-child(30) {
-      transform: rotate(210deg);
-    }
-    &:nth-child(31) {
-      transform: rotate(217deg);
-    }
-    &:nth-child(32) {
-      transform: rotate(224deg);
-    }
-    &:nth-child(33) {
-      transform: rotate(231deg);
-    }
-    &:nth-child(34) {
-      transform: rotate(238deg);
-    }
-    &:nth-child(35) {
-      transform: rotate(245deg);
-    }
-    &:nth-child(36) {
-      transform: rotate(252deg);
-    }
-    &:nth-child(37) {
-      transform: rotate(259deg);
-    }
-    &:nth-child(38) {
-      transform: rotate(266deg);
-    }
-    &:nth-child(39) {
-      transform: rotate(273deg);
-    }
-    &:nth-child(40) {
-      transform: rotate(280deg);
-    }
-    &:nth-child(41) {
-      transform: rotate(287deg);
-    }
-    &:nth-child(42) {
-      transform: rotate(294deg);
-    }
-    &:nth-child(43) {
-      transform: rotate(301deg);
-    }
-    &:nth-child(44) {
-      transform: rotate(308deg);
-    }
-    &:nth-child(45) {
-      transform: rotate(315deg);
-    }
-    &:nth-child(46) {
-      transform: rotate(322deg);
-    }
-    &:nth-child(47) {
-      transform: rotate(329deg);
-    }
-    &:nth-child(48) {
-      transform: rotate(336deg);
-    }
-    &:nth-child(49) {
-      transform: rotate(343deg);
-    }
   }
 }
 

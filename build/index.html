@@ -57,12 +57,7 @@
               <h1 class="title title--bigest hero__title">Эдельвейс</h1>
             </div>
             <div class="social">
-              <div class="social__inner"><span class="social__current">1</span>
-                <div class="social__lines">
-                  <div class="social__line social__line--current"></div>
-                  <div class="social__line social__line--total"></div>
-                </div><span class="social__total">4</span>
-              </div>
+              <div class="social__inner"><a class="social__link social__link--dark" href="">Instagram</a><span class="social__separator">|</span><a class="social__link social__link--dark" href="">ВКонтакте</a></div>
             </div>
           </div>
         </div>
@@ -70,10 +65,17 @@
           <div class="hero__center">
             <h2 class="title title--big title--mobile">Эдельвейс</h2>
             <h2 class="title title--small hero__main-title">Гостиничный комплекс <br> в абзаково</h2>
-            <p class="text hero__text">Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.</p><a class="link hero__link" href="#">Больше об Эдельвейсе</a>
-            <div class="call-btn"><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span><span> </span><span>П</span><span>о</span><span>з</span><span>в</span><span>о</span><span>н</span><span>и</span><span>т</span><span>ь</span><span> </span><span>а</span><span>д</span><span>м</span><span>и</span><span>н</span><span>и</span><span>с</span><span>т</span><span>р</span><span>а</span><span>т</span><span>о</span><span>р</span><span>у</span>
+            <p class="text hero__text">Гостиничный комплекс расположен в самом сердце излюбленного местечка Абзаково, которое находится на Южном Урале — крае, щедро одаренном особой природой и красотой.</p><a class="link hero__link" href="#">Больше об Эдельвейсе</a><a class="hero__mobile-link hero__mobile-link--instagram" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg></a><a class="hero__mobile-link hero__mobile-link--vk" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg></a><a class="call-btn" href="tel:+79028900438">
               <div class="call-btn__round"></div>
-            </div>
+              <svg>
+                <use xlink:href="images/sprite.svg#call-text"></use>
+              </svg></a>
           </div>
           <div class="booking hero__booking">
             <button class="booking__open">
@@ -230,32 +232,104 @@
         </div><a class="link link--arrow offers__link" href="#">Посмотреть все</a>
       </div>
     </section>
-    <section class="services main__services">
-      <div class="container">
-        <h2 class="title title--big services__title">УСЛУГИ гостиничного <br> комплекса</h2>
-      </div>
-      <div class="container-slider">
-        <div class="slider services-slider" id="servicesSlider">
-          <div class="services-slider__image services-slider__background"></div>
-          <div class="slider-wrapper slider_animate" id="servicesSliderWrapper">
-            <div class="slider-slide services-slider__item"><img class="services-slider__image" src="images/services-slider/slide3.jpg" alt="Баня">
-              <h3 class="services-slider__title">Банный комплекс</h3>
-              <p class="services-slider__text">Баня или сауна после активного отдыха – это не только естественный отдых, но и возможность расслабиться, снять боль в забитых мышцах. На территории гостинечного комплекса работает русская баня на дровах.</p>
+    <section class="services section">
+      <div class="container services__container">
+        <h2 class="title title--big services__title">Услуги гостиничного комплекса</h2>
+        <div class="slider-v1 swiper-container services__slider-v1">
+          <div class="slider-v1-navigation">
+            <button class="slider-v1-navigation-prev"></button>
+            <button class="slider-v1-navigation-next"></button>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="slider-v1-slide swiper-slide">
+              <div class="slider-v1-slide__wrapper">
+                <div class="slider-v1-slide__image"><img src="images/services-slider/slide1.jpg" alt="Девушка с ребенком на велосипеде"></div>
+                <p class="slider-v1-slide__text">Возьмите велосипед на прокат и наслаждайтесь великолепными видами Абзаково всей семьей</p>
+              </div>
             </div>
-            <div class="slider-slide services-slider__item"><img class="services-slider__image" src="images/services-slider/slide1.jpg" alt="Девушка с ребенком на велосипеде">
-              <h3 class="services-slider__title">Прокат велосипедов</h3>
-              <p class="services-slider__text">Возьмите велосипед на прокат и наслаждайтесь великолепными видами Абзаково всей семьей.</p>
+            <div class="slider-v1-slide swiper-slide">
+              <div class="slider-v1-slide__wrapper">
+                <div class="slider-v1-slide__image"><img src="images/services-slider/slide2.jpg" alt="Сувенирная лавка"></div>
+                <p class="slider-v1-slide__text">В сувенирной лавке вы сможете приобрести сувениры, которые будут напоминать Вам об отдыхе в Абзаково, а также натуральный Башкирский мёд.</p>
+              </div>
             </div>
-            <div class="slider-slide services-slider__item"><img class="services-slider__image" src="images/services-slider/slide2.jpg" alt="Сувенирная лавка">
-              <h3 class="services-slider__title">Сувенирная лавка</h3>
-              <p class="services-slider__text">В сувенирной лавке вы сможете приобрести сувениры, которые будут напоминать Вам об отдыхе в Абзаково, а также натуральный Башкирский мёд.</p>
+            <div class="slider-v1-slide swiper-slide">
+              <div class="slider-v1-slide__wrapper">
+                <div class="slider-v1-slide__image"><img src="images/services-slider/slide3.jpg" alt="Баня"></div>
+                <p class="slider-v1-slide__text">Баня или сауна после активного отдыха – это не только естественный отдых, но и возможность расслабиться, снять боль в забитых мышцах. На территории гостинечного комплекса работает русская баня на дровах.</p>
+              </div>
             </div>
           </div>
-          <button class="services-slider__button services-slider__button_prev"></button>
-          <button class="services-slider__button services-slider__button_next"></button>
         </div>
       </div>
     </section>
+    <section class="section activities">
+      <div class="container">
+        <h2 class="title title--big activities__title">как интересно <br> провести время <br> в абзаково?</h2>
+      </div>
+      <div class="slider-v2 swiper-container activities__slider-v2">
+        <div class="slider-v2-sidebar">
+          <div class="slider-v2-pagination">
+            <div class="slider-v2-bullet"></div>
+            <div class="slider-v2-bullet"></div>
+            <div class="slider-v2-bullet"></div>
+          </div>
+          <div class="slider-v2-counter">
+            <div class="slider-v2-counter__text"><span>Страница -</span><span id="pageCounter">01</span></div>
+          </div>
+        </div>
+        <div class="swiper slider-v2__swiper slider-v2-container">
+          <div class="slider-v2-wrapper swiper-wrapper">
+            <div class="slider-v2-slide swiper-slide">
+              <div class="slider-v2-slide__wrapper">
+                <div class="slider-v2-slide__image"><img src="images/activities/slide1.jpg" alt="Стадо оленей"></div>
+                <div class="slider-v2-slide__content">
+                  <h3 class="slider-v2-slide__title">Прогулка на оленях</h3>
+                  <p class="slider-v2-slide__text">Прогулка на оленях – необычный и даже экстремальный отдых! Все мы родом из детства и хотим сказки, которые нам рассказывали мамы и бабушки. Ну а кто больше всего ассоциируется со сказкой, как не олени, именно катание на оленях легко возвращает нас в детство, в сказочный мир детских грез, неподдельной радости и ощущения праздника.</p><a class="button slider-v2-slide__button" href="">Узнать подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="slider-v2-slide swiper-slide">
+              <div class="slider-v2-slide__wrapper">
+                <div class="slider-v2-slide__image"><img src="images/activities/slide2.jpg" alt="Хаски"></div>
+                <div class="slider-v2-slide__content">
+                  <h3 class="slider-v2-slide__title">Мини-питомник “Хаски-город”</h3>
+                  <p class="slider-v2-slide__text">Здесь вас встретят самые игривые и неугомонные существа - собаки породы хаски. Достаточно только взглянуть в их небесно-голубые глаза, и вы сразу же ощутите себя совершенно в ином мире – мире нежности, теплоты и любви, исходящей от этих созданий.</p><a class="button slider-v2-slide__button" href="">Узнать подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-v2-sidebar slider-v2-sidebar--empty"></div>
+      </div>
+    </section>
     <script src="scripts/main.min.js"></script>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__compensator"></div>
+        <div class="footer__content">
+          <div class="footer__column">
+            <h4 class="title footer__title">Адрес отеля</h4>
+            <address class="footer__address">453565,<br> Республика Башкортостан, Белорецкий район,<br>с. Новоабзаково,<br> проезд Горный, 1А</address>
+          </div>
+          <div class="footer__column">
+            <h4 class="title footer__title">Адрес Офиса</h4>
+            <address class="footer__address">455000,<br> Челябинская область,<br>г.Магнитогорск, ул.Советская, 9 <br>(магазин "Аркада",<br> 2 этаж)</address>
+          </div>
+          <div class="footer__column">
+            <h4 class="title footer__title">Телефоны</h4>
+            <ul class="footer__list">
+              <li class="footer__list-item">Администраторы<a class="footer__link" href="tel:+79028900438">8 902 890 04 38</a></li>
+              <li class="footer__list-item">Менеджер по продажам <br><a class="footer__link" href="tel:+79026108756">8 902 610 87 56</a><a class="footer__link" href="tel:+79087048098">8 908 704 80 98</a></li>
+              <li class="footer__list-item">Офис в Магнитогорске<a class="footer__link" href="tel:+73519207496">8 3519 20 74 96</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="title footer__title">e-mail</h4><a class="footer__link footer__link--email" href="mailto:edelws@mail.ru">edelws@mail.ru</a>
+          </div>
+        </div>
+        <div class="footer__compensator"></div>
+      </div>
+    </footer>
   </body>
 </html>
