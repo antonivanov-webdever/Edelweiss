@@ -3,6 +3,19 @@
   width: 100%;
   overflow: hidden;
 
+  &--beige {
+    background-color: $beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    .header-wrapper {
+      height: 100px;
+    }
+  }
+
   &.menu-active {
     .logo__link svg {
       fill: $white;

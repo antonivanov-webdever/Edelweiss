@@ -107,6 +107,11 @@
     position: absolute;
     bottom: 200px;
     left: 50px;
+    display: none;
+
+    @include max(m) {
+      display: block;
+    }
 
     @include max(s) {
       bottom: 130px;

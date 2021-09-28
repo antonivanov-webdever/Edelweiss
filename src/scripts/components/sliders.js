@@ -1,5 +1,11 @@
 window.addEventListener('DOMContentLoaded', function() {
     const configureSliderV1 = () => {
+        const sliderV1 = document.querySelector('.slider-v1');
+
+        if (!sliderV1) {
+            return;
+        }
+
         const slider = new Swiper('.slider-v1', {
             slidesPerView: 'auto',
             slidesPerGroupAuto: true,
@@ -32,6 +38,12 @@ window.addEventListener('DOMContentLoaded', function() {
     configureSliderV1();
 
     const configureSliderV2 = () => {
+        const sliderV2 = document.querySelector('.slider-v2');
+
+        if (!sliderV2) {
+            return;
+        }
+
         let fadeSlider, noFadeSlider;
 
         const fadeSliderOptions = {

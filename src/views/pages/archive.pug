@@ -1,0 +1,136 @@
+extends ../layout/default
+
+block variables
+    - let pageLang = ''
+    - let pageTitle = 'Гостиничный комплекс Эдельвейс'
+    - let bodyClass = 'index'
+
+block header
+    include ../modules/_header-beige
+
+block content
+    section.archive.section
+        .archive-bg
+        .container.archive__container
+            h1.title.title--big.archive__title Дома
+            .archive-list-wrapper
+                ul.archive-cards
+                    li.archive-card.archive-cards__item
+                        .archive-card__inner
+                            .archive-card__header--mobile
+                                h3.title.title--small.archive-card__title Дом №1
+                                span.archive-card__price от хххх руб/сут
+                            .archive-card__content
+                                .archive-card__header
+                                    h3.title.title--small.archive-card__title Дом №1
+                                    span.archive-card__price от хххх руб/сут
+                                p.archive-card__desc Тут будет краткое описание дома, максимум на 3 строчки. Желательно не оставлять короткие предлоги в конце строки.
+                                ul
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/bed-small.svg" alt="")
+                                        .archive-card__text Спальных мест - 16
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/brazier.svg" alt="")
+                                        .archive-card__text Мангальная зона
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/sauna.svg" alt="")
+                                        .archive-card__text Баня
+                                .archive-card__footer
+                                    a(href="#").archive-card__link Узнать подробнее
+                            a(href="#").archive-card__image
+                                img(src="images/house.jpg")
+                                span.archive-card__label
+                                    img(src="images/icons/person.svg")
+                                    span 16
+                    li.archive-card.archive-cards__item
+                        .archive-card__inner
+                            .archive-card__header--mobile
+                                h3.title.title--small.archive-card__title Дом №1
+                                span.archive-card__price от хххх руб/сут
+                            .archive-card__content
+                                .archive-card__header
+                                    h3.title.title--small.archive-card__title Дом №1
+                                    span.archive-card__price от хххх руб/сут
+                                p.archive-card__desc Тут будет краткое описание дома, максимум <br> на 3 строчки. Желательно не оставлять короткие предлоги в конце строки.
+                                ul
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/bed-small.svg" alt="")
+                                        .archive-card__text Спальных мест - 16
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/brazier.svg" alt="")
+                                        .archive-card__text Мангальная зона
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/sauna.svg" alt="")
+                                        .archive-card__text Баня
+                                .archive-card__footer
+                                    a(href="#").archive-card__link Узнать подробнее
+                            a(href="#").archive-card__image
+                                img(src="images/house.jpg")
+                                span.archive-card__label
+                                    img(src="images/icons/person.svg")
+                                    span 16
+                    li.archive-card.archive-cards__item
+                        .archive-card__inner
+                            .archive-card__header--mobile
+                                h3.title.title--small.archive-card__title Дом №1
+                                span.archive-card__price от хххх руб/сут
+                            .archive-card__content
+                                h3.title.title--small.archive-card__title Дом №1
+                                span.archive-card__price от хххх руб/сут
+                                p.archive-card__desc Тут будет краткое описание дома, максимум <br> на 3 строчки. Желательно не оставлять короткие предлоги в конце строки.
+                                ul
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/bed-small.svg" alt="")
+                                        .archive-card__text Спальных мест - 16
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/brazier.svg" alt="")
+                                        .archive-card__text Мангальная зона
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/sauna.svg" alt="")
+                                        .archive-card__text Баня
+                                .archive-card__footer
+                                    a(href="#").archive-card__link Узнать подробнее
+                            a(href="#").archive-card__image
+                                img(src="images/house.jpg")
+                                span.archive-card__label
+                                    img(src="images/icons/person.svg")
+                                    span 16
+                    li.archive-card.archive-cards__item
+                        .archive-card__inner
+                            .archive-card__header--mobile
+                                h3.title.title--small.archive-card__title Дом №1
+                                span.archive-card__price от хххх руб/сут
+                            h3.title.title--small.archive-card__title.archive-card__title--mobile Дом №1
+                            .archive-card__content
+                                h3.title.title--small.archive-card__title Дом №1
+                                span.archive-card__price от хххх руб/сут
+                                p.archive-card__desc Тут будет краткое описание дома, максимум <br> на 3 строчки. Желательно не оставлять короткие <br> предлоги в конце строки.
+                                ul
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/bed-small.svg" alt="")
+                                        .archive-card__text Спальных мест - 16
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/brazier.svg" alt="")
+                                        .archive-card__text Мангальная зона
+                                    li
+                                        .archive-card__icon
+                                            img(src="images/icons/sauna.svg" alt="")
+                                        .archive-card__text Баня
+                                .archive-card__footer
+                                    a(href="#").archive-card__link Узнать подробнее
+                            a(href="#").archive-card__image
+                                img(src="images/house.jpg")
+                                span.archive-card__label
+                                    img(src="images/icons/person.svg")
+                                    span 16

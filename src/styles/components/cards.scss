@@ -2,20 +2,40 @@
   display: flex;
   justify-content: space-between;
 
+  &--column {
+    flex-direction: column;
+  }
+
   &-item {
     background-color: $white;
     width: 100%;
-    max-width: 440px;
+
+    &--narrow {
+      max-width: 440px;
+
+      .cards-item__inner {
+        padding: 90px 70px;
+      }
+    }
+
+    &--wide {
+      display: flex;
+
+      .cards-item__inner {
+        padding: 40px 50px;
+      }
+    }
 
     &__inner {
-      padding: 90px 70px;
       display: flex;
       flex-direction: column;
+      min-height: 100%;
 
       @include max(s) {
         padding: 40px 30px;
       }
     }
+
 
     &__title {
       font-weight: normal;
@@ -31,17 +51,25 @@
     }
 
     &__list {
-      margin-top: 20px;
       font-weight: 300;
 
       &-item {
-        margin-top: 16px;
         display: flex;
+        align-items: center;
       }
     }
 
     &__icon {
       margin-right: 5px;
+
+      &--big {
+        height: 45px;
+        width: 47px;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
     &__footer {

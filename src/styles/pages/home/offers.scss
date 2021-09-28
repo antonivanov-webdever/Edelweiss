@@ -15,8 +15,21 @@
   }
 
   &__cards {
+
     @include max(600) {
       justify-content: center;
+    }
+  }
+
+  &-list {
+    &__item {
+      margin-top: 16px;
+    }
+  }
+
+  &-item {
+    &__list {
+      margin-top: 20px;
     }
   }
 
