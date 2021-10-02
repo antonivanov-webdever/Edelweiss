@@ -180,7 +180,8 @@
       }
 
       @include max(xs) {
-        width: calc(100% - 30px);
+        width: calc(100% - 15px);
+        margin-left: 15px;
       }
     }
 
@@ -210,6 +211,7 @@
         display: flex;
         align-items: flex-end;
         flex-direction: column;
+        height: 100%;
       }
 
       &__image {
@@ -236,10 +238,12 @@
         padding: 50px 7px 50px 120px;
         margin-top: -80px;
         height: 350px;
+        min-height: 350px;
 
         @include max(s) {
           margin-top: 0;
           padding: 30px 40px;
+          min-height: 0;
         }
 
         @include max(xs) {
@@ -248,7 +252,7 @@
         }
 
         @include max(xxs) {
-          padding: 15px 20px;
+          padding: 25px;
         }
       }
 
@@ -259,6 +263,10 @@
         letter-spacing: 0.025em;
         text-transform: uppercase;
         color: #000000;
+
+        @include max(xs) {
+          margin-bottom: 20px;
+        }
       }
 
       &__text {
@@ -351,6 +359,74 @@
         }
 
         transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-v3 {
+    &-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    &-button {
+      &-prev,
+      &-next {
+        width: 50px;
+        height: 50px;
+        background-color: $beige;
+        transition: 0.3s;
+        flex-shrink: 0;
+
+        @include max(m) {
+          display: none;
+        }
+
+        @include hover {
+          background-color: $brown;
+
+          svg {
+            stroke: $white;
+          }
+        }
+
+        svg {
+          width: 12px;
+          height: 18px;
+          fill: none;
+          stroke: $black;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    &-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: $brown;
+      border-radius: 50%;
+      cursor: pointer;
+
+      @include hover {
+
+      }
+
+      &:not(:last-child) {
+        margin-right: 19px;
+      }
+
+      &.active {
+        width: 12px;
+        height: 12px;
       }
     }
   }

@@ -6,4 +6,6 @@
 
 //= pages/home/header.js
 //= pages/home/booking.js
+//= pages/single.js
+
 //= components/sliders.js

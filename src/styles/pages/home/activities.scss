@@ -1,6 +1,28 @@
 .activities {
   background-color: $beige;
-  max-height: 832px;
+
+  &-bg {
+    background-color: $text-primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 415px;
+    width: 100%;
+    pointer-events: none;
+
+    @include max(m) {
+      height: 400px;
+    }
+
+    @include max(s) {
+      height: 410px;
+    }
+
+    @include max(xs) {
+      display: none;
+    }
+  }
 
   @include max(s) {
     max-height: none;

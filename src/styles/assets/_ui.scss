@@ -192,3 +192,25 @@
     font-weight: 300;
   }
 }
+
+.button {
+  display: inline-block;
+  background-color: $beige;
+  padding: 18px 65px;
+  text-transform: uppercase;
+  color: $black;
+  transition: 0.3s;
+
+  @include max(xs) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+  }
+
+  @include hover {
+    background-color: $brown;
+    color: $white;
+  }
+
+}

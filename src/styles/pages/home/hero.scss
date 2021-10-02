@@ -163,6 +163,10 @@
     max-width: 375px;
     margin-top: 80px;
 
+    @include min(xl) {
+      max-width: vw(375);
+    }
+
     @include max(1200) {
       margin-top: 50px;
     }
