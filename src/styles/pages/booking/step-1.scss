@@ -1,0 +1,246 @@
+.booking-page {
+  &__container {
+    max-width: 1350px;
+    width: calc(100% - 90px);
+    margin: 0 auto;
+    padding-top: 30px;
+
+    @include max(s) {
+      width: calc(100% - 40px);
+      padding-top: 60px;
+    }
+
+    @include max(320) {
+      width: calc(100% - 20px);
+      padding-top: 70px;
+    }
+  }
+
+  &__content {
+    margin-left: 65px;
+
+    @include max(1024) {
+      margin-left: 35px;
+    }
+
+    @include max(s) {
+      margin-left: 0;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: $text-primary;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $black;
+    max-width: 400px;
+
+    @include max(m) {
+      font-size: 24px;
+      max-width: 350px;
+    }
+
+    @include max(xs) {
+      font-size: 20px;
+    }
+  }
+
+  &__num {
+    font-weight: bold;
+    font-size: 180px;
+    line-height: (134 / 111);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $beige;
+
+    &--brown {
+      color: $brown;
+      opacity: 0.2;
+    }
+
+    @include max(l) {
+      font-size: 150px;
+    }
+
+    @include max(m) {
+      font-size: 130px;
+    }
+
+    @include max(xs) {
+      font-size: 100px;
+    }
+
+    @include max(xxs) {
+      font-size: 80px;
+    }
+  }
+
+  &__cards {
+    padding-top: 40px;
+
+    @include max(s) {
+      padding-top: 30px;
+    }
+
+    @include max(xs) {
+      padding-top: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @include max(xs) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin: 15px;
+    width: calc(25% - 30px);
+    min-width: 255px;
+    box-shadow: 3px 7px 13px -5px #b6a799;
+
+    @include max(1290) {
+      width: calc(33.3333% - 30px);
+    }
+
+    @include max(m) {
+      width: calc(50% - 30px);
+    }
+
+    @include max(xs) {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    &-label {
+      position: absolute;
+      right: -18px;
+      top: -18px;
+      transform: rotate(45deg);
+    }
+
+    &-data {
+      background-color: $beige;
+      padding: 20px 30px;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    &-icon {
+      margin-right: 10px;
+    }
+
+    &-desc {
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    &-price {
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 130%;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 13px;
+        color: #896441;
+      }
+    }
+
+    &-link {
+      border: 1px solid $brown;
+      color: $brown;
+      padding: 10px 15px;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      &--fill {
+        background-color: $beige;
+        color: $text-primary;
+        padding: 12px 26px;
+        border: none;
+        transition: 0.3s;
+
+        @include hover {
+          background-color: $brown;
+          color: $white;
+
+        }
+      }
+    }
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+    svg {
+      fill: none;
+      stroke: $text-primary;
+      width: 5px;
+      height: 10px;
+      margin-right: 8px;
+      margin-top: -2px;
+      transition: 0.3s;
+    }
+
+    @include hover {
+      color: $brown;
+
+      svg {
+        stroke: $brown;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.accordion {
+  &.is-open {
+    .accordion__header svg {
+      transform: rotate(-90deg);
+    }
+  }
+  &__header {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      fill: none;
+      width: 8px;
+      height: 16px;
+      stroke: $text-primary;
+      margin: -5px 0 0 10px;
+      transform: rotate(90deg);
+      transition: 0.4s;
+    }
+  }
+  &__body {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 130%;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.4s;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -5px 0;
+    max-width: 300px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 125px;
+    margin: 5px;
+
+    &-icon {
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    &-desc {
+      line-height: 100%;
+      font-weight: 300;
+    }
+  }
+
+}

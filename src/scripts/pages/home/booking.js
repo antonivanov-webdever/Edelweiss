@@ -10,16 +10,17 @@ window.addEventListener('DOMContentLoaded', function() {
       const target = e.target;
 
       const bookingOpenBtn =  target.closest('.booking__open');
+      const bookingCloseBtn =  target.closest('.booking__close');
+      const params = target.closest('.params-item__value');
 
-      if (bookingOpenBtn && !booking.classList.contains('show')) {
-        booking.classList.add('show');
+      if (bookingCloseBtn && booking.classList.contains('show')
+          || params && booking.classList.contains('show')) {
+        booking.classList.remove('show');
       }
 
-      const bookingCloseBtn =  target.closest('.booking__close');
-      console.log(booking);
-      console.log(booking.classList);
-      if (bookingCloseBtn && booking.classList.contains('show')) {
-        booking.classList.remove('show');
+      if (bookingOpenBtn && !booking.classList.contains('show')
+          || params && !booking.classList.contains('show')) {
+        booking.classList.add('show');
       }
     })
 

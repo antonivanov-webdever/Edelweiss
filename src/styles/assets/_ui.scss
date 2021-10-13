@@ -19,6 +19,10 @@
   text-transform: uppercase;
   color: $black;
 
+  &--beige {
+    color: $beige;
+  }
+
   &--big {
     font-size: 48px;
     line-height: 130%;
@@ -213,4 +217,72 @@
     color: $white;
   }
 
+  &--small {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  &--smallest {
+    padding: 12px;
+  }
+  &--white {
+    background-color: transparent;
+
+    @include hover {
+      background-color: transparent;
+      color: $brown;
+    }
+  }
+
+}
+
+.page-number {
+  position: absolute;
+  right: -115px;
+  top: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 180px;
+  line-height: (170 / 180);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #896441;
+  opacity: 0.2;
+  margin: 0;
+
+  @include max(1200) {
+    font-size: 140px;
+    right: 0;
+  }
+
+  @include max(m) {
+    display: none;
+  }
+
+  & span {
+    position: absolute;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0;
+    bottom: 0;
+    right: 15px;
+  }
+}
+
+.text {
+  &--small {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 159.5%;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--dark {
+    color: $text-primary;
+  }
 }

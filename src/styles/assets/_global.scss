@@ -19,6 +19,9 @@ body {
   }
 }
 
+.main {
+}
+
 .column {
   width: 100%;
   flex-shrink: 0;
@@ -38,6 +41,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 970px;
   margin: 0 auto;
@@ -46,7 +50,7 @@ body {
 
 .section {
   position: relative;
-  padding: 65px 0 65px;
+  padding: 100px 0 65px;
 
   @include max(m) {
     padding: 50px 0 50px;

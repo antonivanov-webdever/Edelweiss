@@ -1,0 +1,91 @@
+extends ../layout/default
+
+block variables
+    - let pageLang = ''
+    - let pageTitle = 'Гостиничный комплекс Эдельвейс'
+    - let bodyClass = 'index'
+
+block header
+    include ../modules/_header-white
+
+block content
+    section.step-2.section.booking-page
+        .booking-page__container.step-2__container
+            h2.booking-page__num Шаг 2
+            .booking-page__content.step-2__content
+                a(href="#").booking-page__back Назад
+                    +icon('arrow-left')
+                h1.title.title--big.booking-page__title Подтверждение выбора
+                hr
+                .step-2__right
+                    .slider-v3.swiper.step-2__slider
+                        span.archive-card__label
+                            img(src="images/icons/person.svg")
+                            span 16
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                    .slider-v3-controls
+                        button.slider-v3-button-prev
+                            +icon('arrow-left')
+                        .slider-v3-pagination
+                        button.slider-v3-button-next
+                            +icon('arrow-right')
+                .accordion.step-2__accordion
+                    .accordion__header НОМЕР СТАНДАРТ
+                        +icon('arrow-right')
+                    .accordion__body
+                        p.accordion__description В номере есть все необходимое для комфортного отдыха: две раздельные кровати, стол, стулья, шкаф, телевизор, холодильник, набор для чая, санузел с ванной. Номера на первом этаже без балкона, на втором этаже с балконом. На каждом этаже рядом с номером кулер для чая и СВЧ-печь для общего пользования.
+                        ul.accordion__list
+                            li.accordion__item
+                                .accordion__item-icon
+                                    img(src="images/icons/square.svg")
+                                span.accordion__item-desc площадь номера 12 м2
+                            li.accordion__item
+                                .accordion__item-icon
+                                    img(src="images/icons/person.svg")
+                                span.accordion__item-desc вместимость 2 человека
+                            li.accordion__item
+                                .accordion__item-icon
+                                    img(src="images/icons/TV.svg")
+                                span.accordion__item-desc кабельное телевидение
+                            li.accordion__item
+                                .accordion__item-icon
+                                    img(src="images/icons/square.svg")
+                                span.accordion__item-desc площадь номера 12 м2
+                .special.step-2__special
+                    .special__title Выберете особые пожелания:
+                    form.special__form
+                        input(type="hidden" value="standard").booking-page__input--hidden
+                        .special__inputs
+                            .special__input-group
+                                input(type="radio" name="bed-type" id="smallBed").special__radio-input
+                                label(for="smallBed").special__radio-decorator
+                                label(for="smallBed").special__radio-label
+                                    img(src="images/icons/bed-small.svg")
+                                    | 2 односпальные кровати
+                            .special__input-group
+                                input(type="radio" name="bed-type" id="bigBed").special__radio-input
+                                label(for="any").special__radio-decorator
+                                label(for="bigBed").special__radio-label
+                                    img(src="images/icons/bed.svg")
+                                    | 1 двуспальная кровать
+                            .special__input-group
+                                input(type="radio" name="bed-type" id="any" checked).special__radio-input
+                                label(for="any").special__radio-decorator
+                                label(for="any").special__radio-label
+                                    img(src="images/icons/bed-small.svg")
+                                    | не важно
+                        span.special__note *Выполнение особых пожеланий не гарантируется
+                        .booking-page__item-footer
+                            .booking-page__item-price 1500 р
+                                span 1 ночь/1 гость
+                            button.booking-page__item-link.booking-page__item-link--fill бронировать

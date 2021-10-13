@@ -1,0 +1,342 @@
+.step-3 {
+  min-height: 100vh;
+
+  &__content {
+    @include max(1200) {
+      margin-left: 25px;
+    }
+
+    @include max(s) {
+      margin-left: 0;
+    }
+  }
+
+  &__small-text {
+    margin-top: 40px;
+  }
+
+  &__personal-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    max-width: 1000px;
+
+    @include max(xs) {
+      margin: 10px 0 0;
+    }
+
+    .input-group {
+      width: calc(100% / 3 - 30px);
+      min-width: 230px;
+      margin: 15px;
+
+      @include max(xs) {
+        width: 100%;
+        min-width: initial;
+        margin: 15px 0;
+      }
+
+      input {
+        max-width: 250px;
+        border-color: $text-primary;
+        color: $text-primary;
+
+        @include max(xs) {
+          max-width: 100%;
+        }
+      }
+      label {
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__agreement {
+    margin-top: 30px;
+
+    .input-group {
+      margin-top: 13px;
+
+    }
+  }
+
+  &__comment {
+    margin-top: 30px;
+  }
+
+  &__textarea {
+    width: 100%;
+    max-width: 900px;
+    height: 100px;
+    resize: none;
+    background-color: $beige;
+    border: none;
+    padding: 16px 23px;
+
+    @include max(xs) {
+      height: auto;
+      min-height: 165px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 159.5%;
+      color: $brown;
+    }
+  }
+
+  &__total-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include max(xs) {
+      flex-direction: column;
+      justify-content: initial;
+      align-items: initial;
+    }
+
+    span {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 120%;
+      color: $brown;
+      margin: 3px 0;
+
+      @include max(xs) {
+        font-size: 16px;
+      }
+    }
+    .step-3__left {
+      display: flex;
+      flex-direction: column;
+      margin: 30px 0;
+
+      @include max(xs) {
+        margin: 30px 0 10px;
+      }
+    }
+
+    .step-3__right {
+      @include max(xs) {
+        margin-bottom: 20px;
+      }
+      span {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 130%;
+        color: $black;
+
+        @include max(xs) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  &__payment {
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    &-info {
+      max-width: 816px;
+      margin-top: 4px;
+
+      a {
+        text-decoration: underline;
+
+        @include hover {
+          color: $brown;
+        }
+      }
+    }
+
+    &-type {
+      margin-top: 40px;
+      max-width: 800px;
+    }
+
+    &-title {
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $text-primary;
+    }
+
+    &-body {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @include max(xs) {
+        flex-direction: column;
+      }
+
+      p {
+        max-width: 631px;
+        margin-right: 30px;
+
+        @include max(xs) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__textarea {
+    margin-top: 30px;
+  }
+
+  &__additional-services {
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+    @include max(m) {
+      margin-top: 50px;
+    }
+
+    @include max(xs) {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.additional-services {
+  &__list {
+    display: flex;
+    margin: 30px -20px 0;
+
+    @include max(1300) {
+      flex-direction: column;
+    }
+
+    @include max(m) {
+      margin: 30px 0 0;
+    }
+
+    @include max(xs) {
+      margin: 15px 0 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: calc(50% - 30px);
+    margin: 20px;
+
+    @include max(1300) {
+      width: 100%;
+      max-width: 725px;
+    }
+
+    @include max(m) {
+      margin: 20px 0;
+    }
+
+    @include max(xs) {
+      flex-direction: column;
+    }
+
+    .counter {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 10px;
+
+      @include max(s) {
+        margin: 0;
+        display: inline-flex;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        height: 20px;
+        padding: 10px;
+
+        @include max(m) {
+          padding: 20px;
+        }
+      }
+    }
+
+    input {
+      width: 15px;
+      border: none;
+      font-size: 14px;
+    }
+
+    img {
+      width: 230px;
+      margin-right: 25px;
+      object-fit: cover;
+
+      @include max(xs) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    &-title {
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+
+      @include max(xs) {
+        margin-top: 30px;
+      }
+
+      &--mobile {
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &-description {
+      margin-top: 15px;
+      line-height: 120%;
+      margin-bottom: 20px;
+    }
+
+    &-footer {
+      display: flex;
+      margin-top: auto;
+      justify-content: space-between;
+      align-items: center;
+
+      @include max(s) {
+        display: initial;
+      }
+    }
+
+    &-price {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 130%;
+      align-self: flex-end;
+
+      @include max(s) {
+        align-self: initial;
+        display: inline-flex;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &-button {
+      @include max(s) {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+

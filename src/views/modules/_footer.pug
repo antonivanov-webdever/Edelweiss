@@ -1,25 +1,77 @@
 footer.footer
-    .footer__wrapper
-        .footer__compensator
-        .footer__content
-            .footer__column
-                h4.title.footer__title Адрес отеля
-                address.footer__address 453565,<br> Республика Башкортостан, Белорецкий район,<br>с. Новоабзаково,<br> проезд Горный, 1А
-            .footer__column
-                h4.title.footer__title Адрес Офиса
-                address.footer__address 455000,<br> Челябинская область,<br>г.Магнитогорск, ул.Советская, 9 <br>(магазин "Аркада",<br> 2 этаж)
-            .footer__column
-                h4.title.footer__title Телефоны
-                ul.footer__list
-                    li.footer__list-item Администраторы
-                        a(href="tel:+79028900438").footer__link 8 902 890 04 38
-                    li.footer__list-item Менеджер по продажам <br>
-                        a(href="tel:+79026108756").footer__link 8 902 610 87 56
-                        a(href="tel:+79087048098").footer__link 8 908 704 80 98
-                    li.footer__list-item Офис в Магнитогорске
-                        a(href="tel:+73519207496").footer__link 8 3519 20 74 96
+    .footer__map#map
+    .footer-wrapper
+        .footer-bg
+        .footer-content
+            .logo.footer__logo
+                +icon('logo')
+            .footer__row
+                .footer__nav-wrapper
+                    nav.nav.footer__nav
+                        ul.nav-menu
+                            li.nav-menu__item.footer__nav-item
+                                a(href="").nav-menu__link.nav-menu__link--beige Бронирование
+                            li.nav-menu__item.footer__nav-item
+                                a(href="").nav-menu__link.nav-menu__link--beige Номера
+                            li.nav-menu__item.footer__nav-item
+                                a(href="").nav-menu__link.nav-menu__link--beige Дома
+                            li.nav-menu__item.footer__nav-item
+                                a(href="").nav-menu__link.nav-menu__link--beige Акции
+                            li.nav-menu__item.footer__nav-item
+                                a(href="").nav-menu__link.nav-menu__link--beige Услуги
+                            li.nav-menu__item.footer__nav-item
+                                a(href="").nav-menu__link.nav-menu__link--beige Контакты
+                    .footer__info
+                        span.footer__time#time 12:00
+                        span  /
+                        span.footer__temperature#temp  10
+                        <sup>o</sup>C
+                .footer__form-wrapper.form-wrapper
+                    h4.title.title--beige.form-wrapper__title Остались вопросы?
+                    p.form-wrapper__text Оставьте вашу заявку здесь и наш менеджер <br> свяжется с Вами
+                    form.contact-form.footer__contact-form
+                        .input-group.contact-form__input-group
+                            input(type="text" name="user-name").contact-form__input#userName
+                            label(for="userName").contact-form__label Ваше имя
+                        .input-group.contact-form__input-group
+                            input(type="tel" name="user-phone").contact-form__input#userPhone
+                            label(for="userPhone").contact-form__label Ваш номер телефона
+                        button(type="submit").contact-form__button Отправить заявку
 
-            .footer__column
-                h4.title.footer__title e-mail
-                a(href="mailto:edelws@mail.ru").footer__link.footer__link--email edelws@mail.ru
-        .footer__compensator
+                .contacts.footer__contacts
+                    .contacts__col
+                        .contacts__item
+                            h4.title.footer__title Адрес отеля
+                            address.footer__address 453565, Республика Башкортостан, Белорецкий район, с. Новоабзаково, проезд Горный, 1А
+                        .contacts__item
+                            h4.title.footer__title Адрес Офиса
+                            address.footer__address 455000, Челябинская область, <br> г. Магнитогорск, ул. Советская, 9 <br> (магазин "Аркада", 2 этаж)
+                        .contacts__item
+                            h4.title.footer__title e-mail
+                            a(href="mailto:edelvs@mail.ru").footer__link.footer__link--email edelvs@mail.ru
+                    .contacts__col
+                        .contacts__item
+                            h4.title.footer__title Телефоны
+                            ul.footer__list
+                                li.footer__list-item Администраторы
+                                    a(href="tel:+79028900438").footer__link 8 902 890 04 38
+                                li.footer__list-item Менеджер по продажам
+                                    a(href="tel:+79026108756").footer__link 8 902 610 87 56
+                                    a(href="tel:+79087048098").footer__link 8 908 704 80 98
+                                li.footer__list-item Офис в Магнитогорске
+                                    a(href="tel:+73519207496").footer__link 8 3519 20 74 96
+
+
+            .footer__row
+                .socials.footer__socials
+                    h4.title.socials__title Свяжитесь с нами в социальных сетях
+                    .socials__links
+                        a.socials__link(href="#")
+                            +icon('instagram')
+                        a.socials__link(href="#")
+                            +icon('vk')
+                        a.socials__link(href="#")
+                            +icon('whatsapp-black')
+                        a.socials__link(href="#")
+                            +icon('viber-black')
+

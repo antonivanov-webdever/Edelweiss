@@ -1,0 +1,61 @@
+.step-4 {
+  min-height: 100vh;
+  background: $beige;
+  display: flex;
+
+  @include max(m) {
+    min-height: auto;
+    padding-bottom: 100px;
+  }
+
+  &__container {
+    background: url("../images/step-4-bg.svg") no-repeat bottom right;
+    min-height: 100%;
+
+    @include max(m) {
+      min-height: auto;
+      background-size: 20%;
+    }
+  }
+
+  &__booking-info {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top:30px;
+  }
+
+  &__data {
+    margin-top: 37px;
+
+    p {
+      margin-top: 13px;
+      font-size: 14px;
+      line-height: 120%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #777373;
+      font-weight: 300;
+
+      span {
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      display: inline-flex;
+      margin-top: 5px;
+      &::before {
+        content: '+';
+        margin-right: 5px;
+      }
+    }
+  }
+}

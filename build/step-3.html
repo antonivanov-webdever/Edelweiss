@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиничный комплекс Эдельвейс</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.min.css">
+  </head>
+  <body class="index">
+    <header class="header header--white">
+      <div class="header-wrapper">
+        <div class="column column--left header__column--left">
+          <div class="logo header__logo"><a class="logo__link" href="/">
+              <svg>
+                <use xlink:href="images/sprite.svg#logo"></use>
+              </svg></a></div>
+        </div>
+        <div class="column column--center header__column--center">
+          <div class="header__menu">
+            <div class="menu-btn header__menu-btn">
+              <div class="menu-btn__burger"><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span></div><span class="menu-btn__text">меню</span>
+            </div>
+          </div>
+        </div>
+        <div class="column column--right header__column--right">
+          <div class="header-links"><a class="link header-links__item link--light" href="#">Дома</a>
+            <div class="header-links__line"></div><a class="link header-links__item link--light" href="#">Номера</a>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <h3 class="title title--bigest menu__title">Эдельвейс</h3>
+        <div class="menu__container">
+          <nav class="nav menu__nav">
+            <ul class="nav-menu">
+              <li class="nav-menu__item nav-menu__item--big menu__item"><a class="nav-menu__link nav-menu__link--white" href="">Бронирование</a></li>
+              <li class="nav-menu__item nav-menu__item--big menu__item"><a class="nav-menu__link nav-menu__link--white" href="">Номера</a></li>
+              <li class="nav-menu__item nav-menu__item--big menu__item"><a class="nav-menu__link nav-menu__link--white" href="">Дома</a></li>
+              <li class="nav-menu__item nav-menu__item--big menu__item"><a class="nav-menu__link nav-menu__link--white" href="">Акции</a></li>
+              <li class="nav-menu__item nav-menu__item--big menu__item"><a class="nav-menu__link nav-menu__link--white" href="">Услуги</a></li>
+              <li class="nav-menu__item nav-menu__item--big menu__item"><a class="nav-menu__link nav-menu__link--white" href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu__images">
+          <div class="menu__image"><img src="./images/menu-bg.jpg" alt=""></div>
+        </div>
+      </div>
+    </header>
+  </body>
+  <main class="main">
+    <section class="step-3 section booking-page">
+      <div class="booking-page__container step-3__container">
+        <h2 class="booking-page__num">Шаг 3</h2>
+        <div class="booking-page__content step-3__content"><a class="booking-page__back" href="#">Назад
+            <svg>
+              <use xlink:href="images/sprite.svg#arrow-left"></use>
+            </svg></a>
+          <h1 class="title title--big booking-page__title">персональные данные и оплата</h1>
+          <hr>
+          <p class="step-3__small-text text--small text--black">На электронную почту вам придёт подтверждение бронирования. При необходимости мы свяжемся с вами по телефону, чтобы уточнить детали.</p>
+          <form class="step-3__form">
+            <div class="step-3__personal-info">
+              <div class="input-group contact-form__input-group">
+                <input class="contact-form__input" type="text" name="user-name" id="userName">
+                <label class="contact-form__label" for="userName">имя</label>
+              </div>
+              <div class="input-group contact-form__input-group">
+                <input class="contact-form__input" type="text" name="user-last-name" id="userLastName">
+                <label class="contact-form__label" for="userLastName">фамилия</label>
+              </div>
+              <div class="input-group contact-form__input-group">
+                <input class="contact-form__input" type="text" name="user-patronymic" id="userPatronymic">
+                <label class="contact-form__label" for="userPatronymic">отчество</label>
+              </div>
+              <div class="input-group contact-form__input-group">
+                <input class="contact-form__input" type="tel" name="user-email" id="userEmail">
+                <label class="contact-form__label" for="userEmail">email</label>
+              </div>
+              <div class="input-group contact-form__input-group">
+                <input class="contact-form__input" type="tel" name="user-phone" id="userPhone">
+                <label class="contact-form__label" for="userPhone">Телефон</label>
+              </div>
+            </div>
+            <div class="step-3__agreement">
+              <div class="special__input-group input-group">
+                <input class="special__radio-input" type="checkbox" name="sms" id="sms">
+                <label class="special__radio-decorator" for="sms"></label>
+                <label class="special__radio-label" for="sms">Я хочу дополнительно получать подтверждение бронирования на телефон.</label>
+              </div>
+              <div class="special__input-group input-group">
+                <input class="special__radio-input" type="checkbox" name="newsletter" id="newsletter">
+                <label class="special__radio-decorator" for="newsletter"></label>
+                <label class="special__radio-label" for="newsletter">Я хочу узнавать о специальных предложениях и новостях по SMS и email.</label>
+              </div>
+              <div class="special__input-group input-group">
+                <input class="special__radio-input" type="checkbox" name="another-person" id="anotherPerson">
+                <label class="special__radio-decorator" for="anotherPerson"></label>
+                <label class="special__radio-label" for="anotherPerson">Я бронирую для другого человека.</label>
+              </div>
+            </div>
+            <div class="step-3__comment">
+              <h3 class="step-3__subtitle text--small text--black">Дополнительные коментарии.</h3>
+              <textarea class="step-3__textarea" name="comment" placeholder="Если у Вас есть дополнительные пожелания, пожалуйста, дайте нам знать. Мы постараемся учесть ваши пожелания при наличии такой возможности."></textarea>
+            </div>
+            <div class="step-3__additional-services">
+              <h2 class="booking-page__title">Добавить дополнительные услуги</h2>
+              <ul class="additional-services__list">
+                <li class="additional-services__item"><img class="additional-services__item-image" src="images/services-slider/slide3.jpg">
+                  <div class="additional-services__item-content">
+                    <h3 class="additional-services__item-title">БАНЯ НА ДРОВАХ</h3>
+                    <p class="additional-services__item-description text--small text--dark">Расположена в 300-х метрах от отеля. В бане есть комната отдыха (диван, холодильник, чайник, посуда) с теплым полом, сан. узел, помывочное отделение с душем и обливным ведром , парилка. Предусмотрены простыни, чай, сахар, фен. Отзывчивый администратор всегда предложит Вам несколько видов веников, различные масла для бани, натуральный башкирский мед. Стоимость указана за 2 часа.</p>
+                    <div class="additional-services__item-footer">
+                      <div class="additional-services__item-price text--black">1800р</div>
+                      <div class="counter">
+                        <button class="button button--smallest button--white">-</button>
+                        <input type="hidden" name="sauna" value="0"><span class="counter-value">2</span>
+                        <button class="button button--smallest button--white">+</button>
+                      </div>
+                      <button class="button additional-services__item-button button--small" type="button">Добавить услугу</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="additional-services__item"><img class="additional-services__item-image" src="images/services-slider/slide3.jpg">
+                  <div class="additional-services__item-content">
+                    <h3 class="additional-services__item-title">САУНА С БАССЕЙНОМ</h3>
+                    <p class="additional-services__item-description text--small text--dark">Для любителей попариться после активного отдыха, открыта сауна с бассейном. В сауне имеются две комнаты отдыха, телевизор, холодильник, чайник, СВЧ-печь, две душевые кабины, парилка с влажным паром, сан. узел. Глубина бассейна 1,35 м, температура воды 18 C<sup>o</sup>. В сауне предусмотрены простыни, чай, сахар, фен. Стоимость указана за 1 час при кол-ве не более 8 человек.</p>
+                    <div class="additional-services__item-footer"><span class="additional-services__item-price text--black">1800р</span>
+                      <div class="counter">
+                        <button class="button button--smallest button--white">-</button>
+                        <input type="hidden" name="sauna-pool" value="0"><span class="counter-value">1</span>
+                        <button class="button button--smallest button--white">+</button>
+                      </div>
+                      <button class="button additional-services__item-button button--small" type="button">Добавить услугу</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="step-3__total-info">
+              <div class="step-3__left"><span>10 января - 11 января</span><span>1 номер стандарт, 1 гость</span><span>2 часа бани на дровах</span></div>
+              <div class="step-3__right"><span class="text--black">1200р</span></div>
+            </div>
+            <hr>
+            <div class="step-3__payment">
+              <h2 class="booking-page__title">Выберете способ оплаты</h2>
+              <p class="step-3__payment-info text--black">Фактом бронирования вы соглашаетесь с <a href="#">правилами онлайн-бронирования</a>, <a href="#">обработкой персональных данных</a> и <a href="#">политикой конфиденциальности</a></p>
+              <div class="step-3__payment-type">
+                <h4 class="step-3__payment-title">оплатить при заселении</h4>
+                <div class="step-3__payment-body">
+                  <p class="text--small">Выбирая этот способ оплаты, вы не вносите предоплату за бронь. Получите подтверждение бронирования на электронную почту, которую указали при бронировании, и предъявите его при заселении.</p>
+                  <button class="button button--small" type="submit" data-payment-type="cash">Бронировать</button>
+                </div>
+              </div>
+              <div class="step-3__payment-type">
+                <h4 class="step-3__payment-title">банковский перевод</h4>
+                <div class="step-3__payment-body">
+                  <p class="text--small">Оплачивается вся сумма брони. Вы получите подтверждение бронирования и квитанцию для оплаты в банке. Квитанцию нужно оплатить в течение 3 банковских дней.</p>
+                  <button class="button button--small" type="submit" data-payment-type="online">Бронировать</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="scripts/main.min.js"></script>
+    <footer class="footer">
+      <div class="footer__map" id="map"></div>
+      <div class="footer-wrapper">
+        <div class="footer-bg"></div>
+        <div class="footer-content">
+          <div class="logo footer__logo">
+            <svg>
+              <use xlink:href="images/sprite.svg#logo"></use>
+            </svg>
+          </div>
+          <div class="footer__row">
+            <div class="footer__nav-wrapper">
+              <nav class="nav footer__nav">
+                <ul class="nav-menu">
+                  <li class="nav-menu__item footer__nav-item"><a class="nav-menu__link nav-menu__link--beige" href="">Бронирование</a></li>
+                  <li class="nav-menu__item footer__nav-item"><a class="nav-menu__link nav-menu__link--beige" href="">Номера</a></li>
+                  <li class="nav-menu__item footer__nav-item"><a class="nav-menu__link nav-menu__link--beige" href="">Дома</a></li>
+                  <li class="nav-menu__item footer__nav-item"><a class="nav-menu__link nav-menu__link--beige" href="">Акции</a></li>
+                  <li class="nav-menu__item footer__nav-item"><a class="nav-menu__link nav-menu__link--beige" href="">Услуги</a></li>
+                  <li class="nav-menu__item footer__nav-item"><a class="nav-menu__link nav-menu__link--beige" href="">Контакты</a></li>
+                </ul>
+              </nav>
+              <div class="footer__info"><span class="footer__time" id="time">12:00</span><span> /</span><span class="footer__temperature" id="temp"> 10</span><sup>o</sup>C</div>
+            </div>
+            <div class="footer__form-wrapper form-wrapper">
+              <h4 class="title title--beige form-wrapper__title">Остались вопросы?</h4>
+              <p class="form-wrapper__text">Оставьте вашу заявку здесь и наш менеджер <br> свяжется с Вами</p>
+              <form class="contact-form footer__contact-form">
+                <div class="input-group contact-form__input-group">
+                  <input class="contact-form__input" type="text" name="user-name" id="userName">
+                  <label class="contact-form__label" for="userName">Ваше имя</label>
+                </div>
+                <div class="input-group contact-form__input-group">
+                  <input class="contact-form__input" type="tel" name="user-phone" id="userPhone">
+                  <label class="contact-form__label" for="userPhone">Ваш номер телефона</label>
+                </div>
+                <button class="contact-form__button" type="submit">Отправить заявку</button>
+              </form>
+            </div>
+            <div class="contacts footer__contacts">
+              <div class="contacts__col">
+                <div class="contacts__item">
+                  <h4 class="title footer__title">Адрес отеля</h4>
+                  <address class="footer__address">453565, Республика Башкортостан, Белорецкий район, с. Новоабзаково, проезд Горный, 1А</address>
+                </div>
+                <div class="contacts__item">
+                  <h4 class="title footer__title">Адрес Офиса</h4>
+                  <address class="footer__address">455000, Челябинская область, <br> г. Магнитогорск, ул. Советская, 9 <br> (магазин "Аркада", 2 этаж)</address>
+                </div>
+                <div class="contacts__item">
+                  <h4 class="title footer__title">e-mail</h4><a class="footer__link footer__link--email" href="mailto:edelvs@mail.ru">edelvs@mail.ru</a>
+                </div>
+              </div>
+              <div class="contacts__col">
+                <div class="contacts__item">
+                  <h4 class="title footer__title">Телефоны</h4>
+                  <ul class="footer__list">
+                    <li class="footer__list-item">Администраторы<a class="footer__link" href="tel:+79028900438">8 902 890 04 38</a></li>
+                    <li class="footer__list-item">Менеджер по продажам<a class="footer__link" href="tel:+79026108756">8 902 610 87 56</a><a class="footer__link" href="tel:+79087048098">8 908 704 80 98</a></li>
+                    <li class="footer__list-item">Офис в Магнитогорске<a class="footer__link" href="tel:+73519207496">8 3519 20 74 96</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__row">
+            <div class="socials footer__socials">
+              <h4 class="title socials__title">Свяжитесь с нами в социальных сетях</h4>
+              <div class="socials__links"><a class="socials__link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg></a><a class="socials__link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg></a><a class="socials__link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#whatsapp-black"></use>
+                  </svg></a><a class="socials__link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#viber-black"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</html>

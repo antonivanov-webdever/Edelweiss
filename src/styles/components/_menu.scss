@@ -80,6 +80,16 @@
       //opacity: 0;
     }
   }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 40px;
+
+      @include max(xs) {
+        margin-top: 25px;
+      }
+    }
+  }
 }
 
 .nav {
@@ -88,28 +98,36 @@
 
   &-menu {
     &__item {
-      font-weight: bold;
-      font-size: 36px;
+      font-size: 14px;
+      font-weight: 300;
       line-height: 130%;
-      letter-spacing: 0.05rem;
       text-transform: uppercase;
-      text-align: center;
 
-      &:not(:first-child) {
-        margin-top: 40px;
-
-        @include max(xs) {
-          margin-top: 25px;
-        }
+      &--big {
+        font-weight: bold;
+        font-size: 36px;
+        letter-spacing: 0.05rem;
+        text-align: center;
       }
     }
 
     &__link {
-      color: $white;
       transition: color 0.4s ease;
 
-      @include max(xs) {
-        font-size: 30px;
+      &--white  {
+        color: $white;
+
+        @include max(xs) {
+          font-size: 30px;
+        }
+      }
+
+      &--beige {
+        color: $beige;
+
+        @include max(xs) {
+          font-size: 18px;
+        }
       }
 
       @include hover {

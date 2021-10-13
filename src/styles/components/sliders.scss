@@ -243,7 +243,6 @@
         @include max(s) {
           margin-top: 0;
           padding: 30px 40px;
-          min-height: 0;
         }
 
         @include max(xs) {
@@ -353,6 +352,7 @@
 
       &__text {
         white-space: nowrap;
+        font-weight: 300;
 
         span:first-child {
           margin-right: 4px;

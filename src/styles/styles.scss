@@ -18,6 +18,7 @@
 @import "components/menu";
 @import "components/cards";
 @import "components/sliders";
+@import "components/accordion";
 
 // Styles
 
@@ -30,3 +31,8 @@
 @import "pages/home/activities";
 @import "pages/archive";
 @import "pages/single";
+@import "pages/booking/step-1.scss";
+@import "pages/booking/step-2.scss";
+@import "pages/booking/step-3.scss";
+@import "pages/booking/step-4.scss";
+

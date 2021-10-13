@@ -7,7 +7,7 @@
   background-position-x: center;
 
   &__title {
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 
     @include max(m) {
       margin-bottom: 30px;
@@ -49,7 +49,9 @@
   }
 
   &__cards-item {
-    opacity: 0.9;
+    box-shadow: 0px 7px 13px -5px #DAC8B7;
+    position: relative;
+    z-index: 2;
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -63,6 +65,12 @@
       @include max(600) {
         display: none;
       }
+    }
+  }
+
+  &__page-number {
+    @include max(1200) {
+      top: -40px;
     }
   }
 

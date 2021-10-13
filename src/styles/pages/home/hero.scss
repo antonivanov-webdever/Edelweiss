@@ -102,12 +102,13 @@
   }
 
   &__mobile-link {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     bottom: 200px;
     left: 50px;
     display: none;
+    fill: $text-primary;
 
     @include max(m) {
       display: block;
@@ -130,8 +131,9 @@
     }
 
     svg {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
+      opacity: 0.8;
     }
   }
 

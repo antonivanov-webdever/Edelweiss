@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
         const slider = new Swiper('.slider-v1', {
             slidesPerView: 'auto',
-            slidesPerGroupAuto: true,
+            // slidesPerGroupAuto: true,
             loop: true,
             speed: 800,
 
@@ -47,12 +47,12 @@ window.addEventListener('DOMContentLoaded', function() {
         let fadeSlider, noFadeSlider;
 
         const fadeSliderOptions = {
-            slidesPerView: 1,
+            speed: 800,
             effect: 'fade',
-            speed: '1200',
-            // autoplay: {
-            //     delay: 3000
-            // },
+            watchSlidesProgress: true,
+            autoplay: {
+                delay: 3000
+            },
             pagination: {
                 el: '.slider-v2-pagination',
                 bulletElement: 'div',
@@ -112,12 +112,12 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         const singleSlider = new Swiper(sliderV3, {
-            slidesPerView: 1,
+            speed: 800,
             effect: 'fade',
-            speed: '1200',
-            // autoplay: {
-            //     delay: 3000
-            // },
+            watchSlidesProgress: true,
+            autoplay: {
+                delay: 3000
+            },
             pagination: {
                 el: '.slider-v3-pagination',
                 bulletElement: 'div',

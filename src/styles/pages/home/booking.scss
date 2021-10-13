@@ -196,14 +196,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      cursor: pointer;
 
       @include max('md') {
         margin-top: 5px;
       }
 
       svg {
-        width: 8px;
-        height: 12px;
+        width: 4px;
+        height: 8px;
         margin: -2px 0 0 6px;
         fill: transparent;
         stroke: $black;

@@ -1,0 +1,105 @@
+extends ../layout/default
+
+block variables
+    - let pageLang = ''
+    - let pageTitle = 'Гостиничный комплекс Эдельвейс'
+    - let bodyClass = 'index'
+
+block header
+    include ../modules/_header-white
+
+block content
+    section.step-3.section.booking-page
+        .booking-page__container.step-3__container
+            h2.booking-page__num Шаг 3
+            .booking-page__content.step-3__content
+                a(href="#").booking-page__back Назад
+                    +icon('arrow-left')
+                h1.title.title--big.booking-page__title персональные данные и оплата
+                hr
+                p.step-3__small-text.text--small.text--black На электронную почту вам придёт подтверждение бронирования. При необходимости мы свяжемся с вами по телефону, чтобы уточнить детали.
+                form.step-3__form
+                    .step-3__personal-info
+                        .input-group.contact-form__input-group
+                            input(type="text" name="user-name").contact-form__input#userName
+                            label(for="userName").contact-form__label имя
+                        .input-group.contact-form__input-group
+                            input(type="text" name="user-last-name").contact-form__input#userLastName
+                            label(for="userLastName").contact-form__label фамилия
+                        .input-group.contact-form__input-group
+                            input(type="text" name="user-patronymic").contact-form__input#userPatronymic
+                            label(for="userPatronymic").contact-form__label отчество
+                        .input-group.contact-form__input-group
+                            input(type="tel" name="user-email").contact-form__input#userEmail
+                            label(for="userEmail").contact-form__label email
+                        .input-group.contact-form__input-group
+                            input(type="tel" name="user-phone").contact-form__input#userPhone
+                            label(for="userPhone").contact-form__label Телефон
+                    .step-3__agreement
+                        .special__input-group.input-group
+                            input(type="checkbox" name="sms" id="sms").special__radio-input
+                            label(for="sms").special__radio-decorator
+                            label(for="sms").special__radio-label Я хочу дополнительно получать подтверждение бронирования на телефон.
+                        .special__input-group.input-group
+                            input(type="checkbox" name="newsletter" id="newsletter").special__radio-input
+                            label(for="newsletter").special__radio-decorator
+                            label(for="newsletter").special__radio-label Я хочу узнавать о специальных предложениях и новостях по SMS и email.
+                        .special__input-group.input-group
+                            input(type="checkbox" name="another-person" id="anotherPerson").special__radio-input
+                            label(for="anotherPerson").special__radio-decorator
+                            label(for="anotherPerson").special__radio-label Я бронирую для другого человека.
+                    .step-3__comment
+                        h3.step-3__subtitle.text--small.text--black Дополнительные коментарии.
+                        textarea(name="comment" placeholder="Если у Вас есть дополнительные пожелания, пожалуйста, дайте нам знать. Мы постараемся учесть ваши пожелания " +
+                        "при наличии такой возможности.").step-3__textarea
+                    .step-3__additional-services
+                        h2.booking-page__title Добавить дополнительные услуги
+                        ul.additional-services__list
+                            li.additional-services__item
+                                img(src="images/services-slider/slide3.jpg").additional-services__item-image
+                                .additional-services__item-content
+                                    h3.additional-services__item-title БАНЯ НА ДРОВАХ
+                                    p.additional-services__item-description.text--small.text--dark Расположена в 300-х метрах от отеля. В бане есть комната отдыха (диван, холодильник, чайник, посуда) с теплым полом, сан. узел, помывочное отделение с душем и обливным ведром , парилка. Предусмотрены простыни, чай, сахар, фен. Отзывчивый администратор всегда предложит Вам несколько видов веников, различные масла для бани, натуральный башкирский мед. Стоимость указана за 2 часа.
+                                    .additional-services__item-footer
+                                        .additional-services__item-price.text--black 1800р
+                                        .counter
+                                            button.button.button--smallest.button--white -
+                                            input(type="hidden" name="sauna" value="0")
+                                            span.counter-value 2
+                                            button.button.button--smallest.button--white +
+                                        button(type="button").button.additional-services__item-button.button--small Добавить услугу
+                            li.additional-services__item
+                                img(src="images/services-slider/slide3.jpg").additional-services__item-image
+                                .additional-services__item-content
+                                    h3.additional-services__item-title САУНА С БАССЕЙНОМ
+                                    p.additional-services__item-description.text--small.text--dark Для любителей попариться после активного отдыха, открыта сауна с бассейном. В сауне имеются две комнаты отдыха, телевизор, холодильник, чайник, СВЧ-печь, две душевые кабины, парилка с влажным паром, сан. узел. Глубина бассейна 1,35 м, температура воды 18 C<sup>o</sup>. В сауне предусмотрены простыни, чай, сахар, фен. Стоимость указана за 1 час при кол-ве не более 8 человек.
+                                    .additional-services__item-footer
+                                        span.additional-services__item-price.text--black 1800р
+                                        .counter
+                                            button.button.button--smallest.button--white -
+                                            input(type="hidden" name="sauna-pool" value="0")
+                                            span.counter-value 1
+                                            button.button.button--smallest.button--white +
+                                        button(type="button").button.additional-services__item-button.button--small Добавить услугу
+                    hr
+                    .step-3__total-info
+                        .step-3__left
+                            span 10 января - 11 января
+                            span 1 номер стандарт, 1 гость
+                            span 2 часа бани на дровах
+                        .step-3__right
+                            span.text--black 1200р
+                    hr
+                    .step-3__payment
+                        h2.booking-page__title Выберете способ оплаты
+                        p.step-3__payment-info.text--black Фактом бронирования вы соглашаетесь с <a href="#">правилами онлайн-бронирования</a>, <a href="#">обработкой персональных данных</a> и <a href="#">политикой конфиденциальности</a>
+                        .step-3__payment-type
+                            h4.step-3__payment-title оплатить при заселении
+                            .step-3__payment-body
+                                p.text--small Выбирая этот способ оплаты, вы не вносите предоплату за бронь. Получите подтверждение бронирования на электронную почту, которую указали при бронировании, и предъявите его при заселении.
+                                button(type="submit" data-payment-type="cash").button.button--small Бронировать
+                        .step-3__payment-type
+                            h4.step-3__payment-title банковский перевод
+                            .step-3__payment-body
+                                p.text--small Оплачивается вся сумма брони. Вы получите подтверждение бронирования и квитанцию для оплаты в банке. Квитанцию нужно оплатить в течение 3 банковских дней.
+                                button(type="submit" data-payment-type="online").button.button--small Бронировать

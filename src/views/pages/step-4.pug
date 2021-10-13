@@ -1,0 +1,26 @@
+extends ../layout/default
+
+block variables
+    - let pageLang = ''
+    - let pageTitle = 'Гостиничный комплекс Эдельвейс'
+    - let bodyClass = 'index'
+
+block header
+    include ../modules/_header-beige
+
+block content
+    section.step-4.section.booking-page
+        .booking-page__container.step-4__container
+            h2.booking-page__num.booking-page__num--brown Шаг 4
+            .booking-page__content.step-4__content
+                a(href="#").booking-page__back На главную
+                    +icon('arrow-left')
+                h1.title.title--big.booking-page__title спасибо, что выбрали эдельвейс
+                hr
+                h3.step-4__booking-info Информация о вашем бронировании
+                .step-4__data
+                    p.step-4__person Данные гостя: <span class="step-4__person-data">Антон Иванов, +7 902 890 51 51</span>
+                    p.step-4__room номер: <span class="step-4__room-data">Стандарт</span>
+                    p.step-4__services Дополнительные услуги:
+                        span Баня на дровах 4 часа
+                        span Мангальная зона 3 часа
