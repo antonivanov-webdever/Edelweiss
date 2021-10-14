@@ -34,12 +34,14 @@ section.hero
                         .booking__params.params
                             .params-item
                                 .params-item__title въезд
-                                .params-item__value 01.09.2020
+                                .params-item__value
+                                    .params-item__check-in 01.09.2020
                                     +icon('arrow-right')
                             .params-separator
                             .params-item
                                 .params-item__title выезд
-                                .params-item__value 02.09.2020
+                                .params-item__value
+                                    .params-item__check-out 02.09.2020
                                     +icon('arrow-right')
                             .params-separator
                             .params-item
@@ -50,7 +52,7 @@ section.hero
                         .calendar__control
                             button.calendar__button.calendar__button-prev(data-calendar-button="btnPrev")
                                 +icon('arrow-left')
-                            .calendar__month(data-calendar-month="05-21")
+                            .calendar__month
                                 | Май, 2021
                             button.calendar__button.calendar__button-next(data-calendar-button="btnNext")
                                 +icon('arrow-right')
@@ -66,7 +68,7 @@ section.hero
                             .calendar__days
                     .term.booking__term
                         span.term__desc Количество ночей:
-                        span.term__count 3 ночи
+                        span.term__count 1
                         button.hero__mobile-button
                             span бронировать
                     button.booking__close

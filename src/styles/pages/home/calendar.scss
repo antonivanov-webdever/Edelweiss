@@ -76,6 +76,23 @@
     &-prev {
       margin-right: 10px;
 
+      &.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+
+        svg {
+          pointer-events: none;
+        }
+
+        @include hover {
+          &:hover {
+            svg {
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+
       @include min(1440) {
         margin-right: vw(10);
       }
@@ -179,15 +196,37 @@
     letter-spacing: 0.02em;
     margin: vw(9);
     flex-shrink: 0;
-    opacity: 0.9;
+    opacity: 0.5;
+
+    &--disabled {
+      pointer-events: none;
+    }
 
     &.current-month {
       color: $text-primary;
       opacity: 1;
     }
+    &.current-month.calendar__day--disabled {
+      opacity: 0.5;
+    }
 
     &.current-day {
       box-shadow: inset 0 0 0 2px $brown;
+    }
+
+    &.check-in {
+      background-color: $brown;
+      color: $white;
+    }
+
+    &.day-between {
+      background-color: rgba($brown, 0.2);
+      color: $white;
+    }
+
+    &.check-out {
+      background-color: $brown;
+      color: $white;
     }
 
     @include max(m) {

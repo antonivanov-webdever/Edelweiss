@@ -2629,6 +2629,14 @@ body {
           transform: translateX(3px); } }
     .calendar__button-prev {
       margin-right: 10px; }
+      .calendar__button-prev.disabled {
+        opacity: 0.3;
+        cursor: not-allowed; }
+        .calendar__button-prev.disabled svg {
+          pointer-events: none; }
+        @media (min-width: 1080px) {
+          .calendar__button-prev.disabled:hover:hover svg {
+            transform: translateX(0); } }
       @media only screen and (min-width: 1440px) {
         .calendar__button-prev {
           margin-right: 0.69444vw; } }
@@ -2707,12 +2715,25 @@ body {
     letter-spacing: 0.02em;
     margin: 0.625vw;
     flex-shrink: 0;
-    opacity: 0.9; }
+    opacity: 0.5; }
+    .calendar__day--disabled {
+      pointer-events: none; }
     .calendar__day.current-month {
       color: #363636;
       opacity: 1; }
+    .calendar__day.current-month.calendar__day--disabled {
+      opacity: 0.5; }
     .calendar__day.current-day {
       box-shadow: inset 0 0 0 2px #896441; }
+    .calendar__day.check-in {
+      background-color: #896441;
+      color: #ffffff; }
+    .calendar__day.day-between {
+      background-color: rgba(137, 100, 65, 0.2);
+      color: #ffffff; }
+    .calendar__day.check-out {
+      background-color: #896441;
+      color: #ffffff; }
     @media only screen and (max-width: 992px) {
       .calendar__day {
         width: 42px;
