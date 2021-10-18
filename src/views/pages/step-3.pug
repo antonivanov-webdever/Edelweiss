@@ -63,10 +63,10 @@ block content
                                     .additional-services__item-footer
                                         .additional-services__item-price.text--black 1800р
                                         .counter
-                                            button.button.button--smallest.button--white -
-                                            input(type="hidden" name="sauna" value="0")
-                                            span.counter-value 2
-                                            button.button.button--smallest.button--white +
+                                            input(type="hidden" value="2" name="sauna")
+                                            button(type="button").decrement-btn -
+                                            span.counter__result 2
+                                            button(type="button").increment-btn +
                                         button(type="button").button.additional-services__item-button.button--small Добавить услугу
                             li.additional-services__item
                                 img(src="images/services-slider/slide3.jpg").additional-services__item-image
@@ -76,10 +76,10 @@ block content
                                     .additional-services__item-footer
                                         span.additional-services__item-price.text--black 1800р
                                         .counter
-                                            button.button.button--smallest.button--white -
-                                            input(type="hidden" name="sauna-pool" value="0")
-                                            span.counter-value 1
-                                            button.button.button--smallest.button--white +
+                                            input(type="hidden" value="2" name="sauna")
+                                            button(type="button").decrement-btn -
+                                            span.counter__result 1
+                                            button(type="button").increment-btn +
                                         button(type="button").button.additional-services__item-button.button--small Добавить услугу
                     hr
                     .step-3__total-info

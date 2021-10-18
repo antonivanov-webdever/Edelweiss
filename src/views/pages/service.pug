@@ -1,0 +1,58 @@
+extends ../layout/default
+
+block variables
+    - let pageLang = ''
+    - let pageTitle = 'Гостиничный комплекс Эдельвейс'
+    - let bodyClass = 'index'
+
+block header
+    include ../modules/_header-white
+
+block content
+    section.single.section
+        .single__container
+            h1.title.title--big.single__title Эдельвейс,
+                span  Абзаково
+                span.single__num 01
+            .single-wrapper
+                .single-left
+                    .single-left__container
+                        .single-left__heading
+                            .single-left__line
+                            span.single-left__subtitle КОНФЕРЕНЦ&nbsp;-&nbsp;ЗАЛ
+                            .single-left__line
+                        .text-block
+                            p Гостям отеля предлагаем современный конференц-зал на 45 человек для проведения семинаров, презентаций, корпоративных мероприятий. Конференц-зал оснащён всем необходимым презентационным оборудованием:
+                            ul
+                                li мультимедийный проектор;
+                                li настенный экран;
+                                li микшерный пульт, микрофон;
+                                li флипчарт, магнитно-маркерная доска;
+                                li DVD-плеер;
+                                li меется система кондиционирования.
+                            p Для решения особых вопросов имеется комната переговоров. Для гостей предлагаем сопровождение мероприятия менеджером по организации кофе-пауз и прочих сопутствующих мероприятий. <br>Так же команда отеля «Эдельвейс» организует обучающие тренинги, семинары, конференции по различным направлениям.
+
+                            p Аренда в период Весна-лето 2020: <span style="color:tomato;">5000</span> руб.
+                            a(href="#").button Бронировать
+                .single-right
+                    .slider-v3.single__slider.swiper
+                        span.archive-card__label
+                            img(src="images/icons/person.svg")
+                            span 16
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                            .swiper-slide
+                                img(src="images/house.jpg")
+                    .slider-v3-controls
+                        button.slider-v3-button-prev
+                            +icon('arrow-left')
+                        .slider-v3-pagination
+                        button.slider-v3-button-next
+                            +icon('arrow-right')

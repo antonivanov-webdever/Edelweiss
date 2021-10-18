@@ -1,0 +1,30 @@
+.text-block {
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    color: $text-primary;
+    margin-top: 25px;
+
+    @include min(xl) {
+      font-size: vw(14);
+      margin-top: vw(25);
+    }
+  }
+
+  ul {
+    list-style: inside;
+    margin-top: 25px;
+
+    li {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+
+  .button {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

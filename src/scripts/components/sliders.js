@@ -33,6 +33,17 @@ window.addEventListener('DOMContentLoaded', function() {
         slider.on('slideChangeTransitionEnd', addActiveClasses);
         slider.on('activeIndexChange', removeActiveClasses);
 
+        sliderV1.addEventListener('click', e => {
+            const target = e.target;
+
+            const slide = target.closest('.slider-v1-slide');
+
+            if (slide && !slide.classList.contains('is-active')) {
+                e.preventDefault()
+
+            }
+        })
+
         addActiveClasses();
     }
     configureSliderV1();

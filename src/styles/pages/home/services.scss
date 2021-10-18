@@ -14,4 +14,64 @@
       margin-top: 40px;
     }
   }
+
+  &__content {
+    display: flex;
+    padding-top: 80px;
+  }
+
+  &__left {
+    width: 43%;
+  }
+
+  &__right {
+    position: relative;
+    width: calc(57% - 50px);
+    margin-left: auto;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $text-primary;
+
+    &.is-active {
+      -webkit-text-fill-color: $text-primary;
+      -webkit-text-stroke: 1px transparent;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    position: relative;
+    min-height: 325px;
+  }
+
+  &__description {
+    font-weight: 300;
+    margin-top: 10px;
+  }
 }

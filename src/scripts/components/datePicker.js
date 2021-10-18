@@ -423,7 +423,8 @@ window.addEventListener('DOMContentLoaded', function() {
             this.init()
         }
     }
-
-    const dp = new DatePicker('.calendar', '.calendar__control', '.calendar__days')
+    if (document.querySelector('.calendar')) {
+        const dp = new DatePicker('.calendar', '.calendar__control', '.calendar__days')
+    }
 
 })
