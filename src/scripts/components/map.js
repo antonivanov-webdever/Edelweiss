@@ -31,10 +31,12 @@ window.addEventListener('DOMContentLoaded', function() {
             const myMap = new ymaps.Map('map', {
                 center: [53.811103, 58.637],
                 zoom: 17,
-                controls: [],
+                controls: ['zoomControl'],
             }, {
                preset: 'islands#blackStretchyIcon',
            });
+
+            myMap.behaviors.disable('scrollZoom')
 
             const myPlacemark1 = new ymaps.Placemark([53.811103, 58.636024], {
                    hintContent: 'Эдельвейс'

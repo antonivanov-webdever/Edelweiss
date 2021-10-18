@@ -79,7 +79,7 @@
                 <use xlink:href="images/sprite.svg#call-text"></use>
               </svg></a>
           </div>
-          <div class="booking hero__booking">
+          <div class="booking hero__booking show">
             <button class="booking__open">
               <svg>
                 <use xlink:href="images/sprite.svg#arrow-up--big"></use>
@@ -109,11 +109,31 @@
                   </div>
                   <div class="params-separator"></div>
                   <div class="params-item">
-                    <div class="params-item__title">количество <br> человек</div>
-                    <div class="params-item__value">2
+                    <div class="params-item__title">количество человек</div>
+                    <div class="params-item__value">
+                      <div class="params-item__value-people">2</div>
                       <svg>
                         <use xlink:href="images/sprite.svg#arrow-right"></use>
                       </svg>
+                    </div>
+                    <div class="params-dropdown">
+                      <div class="params-dropdown__item"><span class="params-dropdown__title">Взрослые</span>
+                        <div class="params-dropdown__counter counter">
+                          <input class="params-dropdown__input" type="hidden" value="2" id="adult">
+                          <button class="params-dropdown__btn params-dropdown__decrement-btn decrement-btn">-</button><span class="params-dropdown__count counter__result">2</span>
+                          <button class="params-dropdown__btn params-dropdown__increment-btn increment-btn">+</button>
+                        </div>
+                      </div>
+                      <div class="params-dropdown__item"><span class="params-dropdown__title">Дети (младше 16 лет)</span>
+                        <div class="params-dropdown__counter counter">
+                          <input class="params-dropdown__input" type="hidden" value="0" id="children">
+                          <button class="params-dropdown__btn params-dropdown__decrement-btn decrement-btn">-</button><span class="params-dropdown__count counter__result">0</span>
+                          <button class="params-dropdown__btn params-dropdown__increment-btn increment-btn">+</button>
+                        </div>
+                      </div>
+                      <div class="params-dropdown__footer">
+                        <button class="params-dropdown__close button button--smallest" type="button">Готово</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -145,9 +165,8 @@
                   <div class="calendar__days"></div>
                 </div>
               </div>
-              <div class="term booking__term"><span class="term__desc">Количество ночей:</span><span class="term__count">1</span>
-                <button class="hero__mobile-button"><span>бронировать</span></button>
-              </div>
+              <div class="term booking__term"><span class="term__desc">Количество ночей:</span><span class="term__count">1</span></div>
+              <button class="hero__mobile-button"><span>бронировать</span></button>
               <button class="booking__close">
                 <svg>
                   <use xlink:href="images/sprite.svg#arrow-down--big"></use>

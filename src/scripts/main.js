@@ -13,3 +13,4 @@
 //= components/map.js
 //= components/accordion.js
 //= components/datePicker.js
+//= components/counter.js

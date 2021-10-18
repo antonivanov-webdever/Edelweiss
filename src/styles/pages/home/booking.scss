@@ -7,7 +7,7 @@
   height: 100vh;
   max-height: 150px;
   background-color: $beige;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.3s ease;
 
   @include max(s) {
     max-height: 100px;
@@ -15,19 +15,10 @@
 
   &__wrapper {
     height: 100%;
-    padding-bottom: 53px;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-
-    @include max(m) {
-      padding-bottom: 30px;
-    }
-
-    @media (max-height: 767px) {
-      padding-bottom: 20px;
-    }
+    padding-bottom: 0;
   }
 
   .booking__open {
@@ -55,6 +46,7 @@
   .term,
   .booking__close {
     opacity: 0;
+    display: none;
   }
 
   &.show {
@@ -64,15 +56,36 @@
       max-height: calc(100vh - 80px);
     }
 
+    .booking__wrapper {
+      padding-bottom: 53px;
+
+      @include max(m) {
+        padding-bottom: 30px;
+      }
+
+      @media (max-height: 767px) {
+        padding-bottom: 20px;
+      }
+    }
+
     .booking__open {
       opacity: 0;
       visibility: hidden;
+    }
+
+    .hero__mobile-button {
+      pointer-events: auto;
+      animation-name: buttonShown;
+      animation-duration: 0.5s;
+      animation-delay: 0.4s;
+      animation-fill-mode: forwards;
     }
 
     .booking__close,
     .calendar,
     .term {
       opacity: 1;
+      display: block;
     }
   }
 
@@ -123,9 +136,18 @@
   }
 
   &__close {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 30px;
+
+    @include max(375) {
+      bottom: 15px;
+    }
+
     @include hover {
       &:hover {
-        transform: translateY(7px);
+        transform: translate(-50%, 7px);
       }
     }
   }
@@ -144,20 +166,21 @@
   }
 
   &__term {
-    padding: 0 33px;
+    //padding: 0 33px;
     font-size: 16px;
     line-height: (19 / 16);
+    margin: 0 auto;
 
     @include min('xl') {
       font-size: vw(16);
     }
 
     @include max(m) {
-      padding: 0 33px 20px;
+      //padding: 0 33px 20px;
     }
 
     @media (max-height: 767px) {
-      padding: 0 33px 20px;
+      //padding: 0 33px 20px;
     }
   }
 }
@@ -175,6 +198,7 @@
     justify-content: space-between;
     padding: 5px 0;
     width: calc(33.33% - 50px);
+    position: relative;
 
     @include max(1200) {
       width: calc(33.3% - 20px);
@@ -218,6 +242,69 @@
     width: 1px;
     background-color: $text-primary;
   }
+  
+  &-dropdown {
+    background-color: #fff;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    min-width: 250px;
+    top: calc(100% + 10px);
+    right: 0;
+    padding: 30px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    &__item {
+      font-size: 14px;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    &__btn {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      background-color: $beige;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      @include hover {
+        background-color: rgba($brown, 0.8);
+        color: $white;
+      }
+    }
+
+    &__counter {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    &__count {
+      margin: 0 20px;
+    }
+
+    &__close {
+      width: 100%;
+      margin-top: 35px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
 }
 
 .term {
@@ -230,5 +317,13 @@
     @include max(350) {
       display: none;
     }
+  }
+}
+@keyframes buttonShown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

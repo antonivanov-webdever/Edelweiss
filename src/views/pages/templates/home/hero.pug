@@ -26,7 +26,7 @@ section.hero
                     .call-btn__round
                     +icon('call-text')
 
-            .booking.hero__booking
+            .booking.hero__booking.show
                 button.booking__open
                     +icon('arrow-up--big')
                 .booking__wrapper
@@ -45,9 +45,27 @@ section.hero
                                     +icon('arrow-right')
                             .params-separator
                             .params-item
-                                .params-item__title количество <br> человек
-                                .params-item__value 2
+                                .params-item__title количество человек
+                                .params-item__value
+                                    .params-item__value-people 2
                                     +icon('arrow-right')
+                                .params-dropdown
+                                    .params-dropdown__item
+                                        span.params-dropdown__title Взрослые
+                                        .params-dropdown__counter.counter
+                                            input(type="hidden" value="2").params-dropdown__input#adult
+                                            button.params-dropdown__btn.params-dropdown__decrement-btn.decrement-btn -
+                                            span.params-dropdown__count.counter__result 2
+                                            button.params-dropdown__btn.params-dropdown__increment-btn.increment-btn +
+                                    .params-dropdown__item
+                                        span.params-dropdown__title Дети (младше 16 лет)
+                                        .params-dropdown__counter.counter
+                                            input(type="hidden" value="0").params-dropdown__input#children
+                                            button.params-dropdown__btn.params-dropdown__decrement-btn.decrement-btn -
+                                            span.params-dropdown__count.counter__result 0
+                                            button.params-dropdown__btn.params-dropdown__increment-btn.increment-btn +
+                                    .params-dropdown__footer
+                                        button(type='button').params-dropdown__close.button.button--smallest Готово
                     .calendar.booking__calendar
                         .calendar__control
                             button.calendar__button.calendar__button-prev(data-calendar-button="btnPrev")
@@ -69,8 +87,8 @@ section.hero
                     .term.booking__term
                         span.term__desc Количество ночей:
                         span.term__count 1
-                        button.hero__mobile-button
-                            span бронировать
+                    button.hero__mobile-button
+                        span бронировать
                     button.booking__close
                         +icon('arrow-down--big')
         .column.column--right.hero__column--right

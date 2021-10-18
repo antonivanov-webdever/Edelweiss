@@ -1,6 +1,10 @@
 .calendar {
   width: vw(400);
 
+  @media screen and (max-height: 950px) and (min-width: 1700px) {
+    width: 402px;
+  }
+
   @include max(m) {
     width: 400px;
   }
@@ -114,6 +118,10 @@
     align-items: center;
     margin: 0 vw(-10);
 
+    @media screen and (max-height: 950px) and (min-width: 1700px) {
+      margin: 0 -10px;
+    }
+
     @include max(m) {
       margin: 0 -10px;
     }
@@ -152,6 +160,14 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
 
+    @media screen and (max-height: 950px) and (min-width: 1700px) {
+      width: 42px;
+      height: 42px;
+      margin: 0 9px;
+      padding: 3px 6px;
+      font-size: 16px;
+    }
+
     @include max(m) {
       width: 42px;
       height: 42px;
@@ -178,6 +194,10 @@
     flex-wrap: wrap;
     margin: vw(10) vw(-10) 0;
 
+    @media screen and (max-height: 950px) and (min-width: 1700px) {
+      margin: 10px -10px 0;
+    }
+
     @include max(m) {
       margin: 0 -10px 0;
     }
@@ -198,15 +218,25 @@
     flex-shrink: 0;
     opacity: 0.5;
 
-    &--disabled {
+    @media screen and (max-height: 950px) and (min-width: 1700px) {
+      width: 42px;
+      height: 42px;
+      margin: 9px;
+      font-size: 16px;
+    }
+
+    &.disabled {
       pointer-events: none;
+      opacity: 0.5;
+      position: relative;
+      overflow: hidden;
     }
 
     &.current-month {
       color: $text-primary;
       opacity: 1;
     }
-    &.current-month.calendar__day--disabled {
+    &.current-month.disabled {
       opacity: 0.5;
     }
 
@@ -220,7 +250,7 @@
     }
 
     &.day-between {
-      background-color: rgba($brown, 0.2);
+      background-color: rgba($brown, 0.4) !important;
       color: $white;
     }
 
